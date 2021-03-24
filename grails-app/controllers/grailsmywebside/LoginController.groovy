@@ -11,7 +11,6 @@ class LoginController {
          if(userFound){
             session ["user"] = params.login
             redirect (controller: "department", action:"showDepartment")
-            return true
         }
         else{
             flash.message = "Τα στοιχεία σας δεν είναι σωστά. Παρακαλώ προσπαθήστε ξανά!"
