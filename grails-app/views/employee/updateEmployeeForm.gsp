@@ -64,7 +64,7 @@
                     </div>
 
 
-                    <g:submitButton type="submit" class="btn btn-primary" name="Ενημέρωση">action="updateEmployee"</g:submitButton>
+                    <g:submitButton type="submit" class="btn btn-primary" name="Ενημέρωση" action="updateEmployee"</g:submitButton>
                 </g:form>
             </div>
 
