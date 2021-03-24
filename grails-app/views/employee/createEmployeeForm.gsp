@@ -13,7 +13,7 @@
 <body>
 <nav class="navbar navbar-expand navbar-white fixed-top bg-white">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/departments">Etaireia</a>
+        <a class="navbar-brand" href="/departments">Εταιρεία</a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav">
                 <li class="nav-item" style="padding-left: 2700%">
@@ -35,10 +35,10 @@
 </nav>
 
 <div class="container" style="width: 30%; margin-left:15%;"><br><br><br>
-    <h2>Προσθήκη employee</h2>
+    <h2>Προσθήκη υπαλλήλου</h2>
     <g:form name="createEmployeeForm" controller="employee" action="createEmployee">
         <div class="mb-3">
-            <label class="form-label">Κωδικός department</label>
+            <label class="form-label">Κωδικός τμήματος</label>
             <input name="department_id" class="form-control" required="true"><br/>
         </div>
         <div class="mb-3">

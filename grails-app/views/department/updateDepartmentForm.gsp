@@ -12,7 +12,7 @@
 <body>
 <nav class="navbar navbar-expand navbar-white fixed-top bg-white">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/departments">Etaireia</a>
+        <a class="navbar-brand" href="/departments">Εταιρεία</a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav">
                 <li class="nav-item" style="padding-left: 2700%">
@@ -33,16 +33,16 @@ body {
 </style>
 
 <div class="container" style="width: 30%; margin-top: 15%; margin-left:15%">
-    <h2>Ενημέρωση στοιχείων department</h2>
+    <h2>Ενημέρωση στοιχείων τμήματος</h2>
         <g:form name="createDepartmentForm" controller="Department" action="updateDepartment">
                 <div class="mb-3">
-                    <label class="form-label">Κωδικός Department</label>
+                    <label class="form-label">Κωδικός τμήματος</label>
                     <input name="department_id" class="form-control" required="true"
                         value="${departmentInformation.department_id}" readonly><br/>
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">Νεό Όνομα Department</label>
+                    <label class="form-label">Νέο Όνομα τμήματος</label>
                     <input name="department_name" class="form-control" required="true"
                            value="${departmentInformation.department_name}"><br/>
                 </div>

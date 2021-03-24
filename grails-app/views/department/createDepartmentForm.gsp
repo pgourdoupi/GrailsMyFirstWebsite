@@ -13,7 +13,7 @@
  <body>
             <nav class="navbar navbar-expand navbar-white fixed-top bg-white">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="/departments">Etaireia</a>
+                    <a class="navbar-brand" href="/departments">Εταιρεία</a>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav">
                             <li class="nav-item" style="padding-left: 2700%">
@@ -34,7 +34,7 @@
     </style>
 
     <div class="container" style="margin-left: 10%; margin-top: 2%; padding:0%; width: 30%"><br><br>
-        <h2>Δημιουργία νέου Department</h2>
+        <h2>Δημιουργία νέου τμήματος</h2>
         <g:form name="createDepartmentForm" controller="department" action="createDepartment">
             <div class="mb-3">
                 <label class="form-label">Όνομα</label>

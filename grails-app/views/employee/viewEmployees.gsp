@@ -14,7 +14,7 @@
 <body>
 <nav class="navbar navbar-expand navbar-white fixed-top bg-white">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/departments">Etaireia</a>
+        <a class="navbar-brand" href="/departments">Εταιρεία</a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav">
                 <li class="nav-item" style="padding-left: 2700%">
@@ -36,17 +36,17 @@
 </nav>
 
 ${allEmployees}<br><br>
-<h3>Παρακάτω φαίνονται οι Employees:</h3>
-<h3 style="margin-left: 5%; margin-top: 5%; padding:0%" ></h3>
-<table class="table">
-    <thead>
-    <tr>
-        <th scope="col">Κωδικός Employee</th>
+ <h3>Παρακάτω φαίνονται οι υπάλληλοι:</h3>
+ <h3 style="margin-left: 5%; margin-top: 5%; padding:0%" ></h3>
+ <table class="table">
+     <thead>
+     <tr>
+        <th scope="col">Κωδικός υπαλλήλου</th>
         <th scope="col">Όνομα</th>
         <th scope="col">Επώνυμο</th>
         <th scope="col">Ημερομηνία γέννησης</th>
         <th scope="col">ΑΦΜ</th>
-        <th scope="col">Κωδικός Department</th>
+        <th scope="col">Κωδικός τμήματος</th>
         <th scope="col">Επιλογές</th>
     </tr>
     </thead>
@@ -59,7 +59,6 @@ ${allEmployees}<br><br>
             <th scope="row">${employees.dob}</th>
             <th scope="row">${employees.afm}</th>
             <th scope="row">${employees.department_id}</th>
-
             <td>
                 <g:link controller="Employee" action="updateEmployeeForm"
                         params="[employee_id: employees.employee_id, first_name: employees.first_name, last_name: employees.last_name,
@@ -67,7 +66,7 @@ ${allEmployees}<br><br>
                     <g:actionSubmit type="submit" class="btn btn-primary" value="Ενημέρωση" action="updateEmployeeForm"/>
                 </g:link>
                 <g:link controller="Employee" action="deleteEmployee" params="[employee_id: employees.employee_id]">
-                    <g:actionSubmit type="submit" class="btn btn-primary" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" value="Διαγραφή Employee" action="viewEmployees"/>
+                    <g:actionSubmit type="submit" class="btn btn-primary" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" value="Διαγραφή" action="viewEmployees"/>
                 </g:link>
             </td>
         </tr>
@@ -75,7 +74,7 @@ ${allEmployees}<br><br>
     </tbody>
 </table>
         <g:link controller="employee" action="createEmployeeForm">
-            <g:actionSubmit type="submit" class="btn btn-primary" value="Δημιουργία Employee" action="createEmployeeForm"/>
+            <g:actionSubmit type="submit" class="btn btn-primary" value="Δημιουργία" action="createEmployeeForm"/>
         </g:link>
 
 </body>

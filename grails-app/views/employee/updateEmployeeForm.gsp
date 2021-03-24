@@ -12,7 +12,7 @@
 <body>
 <nav class="navbar navbar-expand navbar-white fixed-top bg-white">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/departments">Etaireia</a>
+        <a class="navbar-brand" href="/departments">Εταιρεία</a>
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav">
@@ -34,15 +34,15 @@ body {
 </style>
 
 <div class="container" style="width: 35%; margin-left:15%"><br><br>
-    <h2>Ενημέρωση στοιχείων Employee</h2>
+    <h2>Ενημέρωση στοιχείων υπαλλήλου</h2>
     <g:form name="createEmployeeForm" controller="Employee" action="updateEmployee">
         <div class="mb-3">
-            <label class="form-label">Κωδικός employee</label>
+            <label class="form-label">Κωδικός υπαλλήλου</label>
             <input name="employee_id" class="form-control" required="true"
                    value="${employeeInformation.employee_id}" maxlength="15"><br/>
         </div>
         <div class="mb-3">
-            <label class="form-label">Κωδικός Department</label>
+            <label class="form-label">Κωδικός τμήματος</label>
             <input name="department_id" class="form-control" required="true"
                    value="${employeeInformation.department_id}" maxlength="15"><br/>
         </div>
