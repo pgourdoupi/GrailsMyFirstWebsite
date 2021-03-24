@@ -38,7 +38,7 @@
 ${allEmployees}<br><br>
 <h3>Παρακάτω φαίνονται οι Employees:</h3>
 <h3 style="margin-left: 5%; margin-top: 5%; padding:0%" ></h3>
-<table class="table table-bordered table-dark">
+<table class="table">
     <thead>
     <tr>
         <th scope="col">Κωδικός Employee</th>

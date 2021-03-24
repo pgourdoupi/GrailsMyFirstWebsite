@@ -36,7 +36,7 @@
 ${allDepartments}<br><br>
     <h3>Παρακάτω φαίνονται τα departments:</h3>
     <h3 style="margin-left: 10%; margin-top: 2%; padding:0%" ></h3>
-    <table class="table table-bordered table-dark">
+    <table class="table">
         <thead>
             <tr>
                 <th scope="col">Κωδικός Department</th>
