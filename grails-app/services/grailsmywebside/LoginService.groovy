@@ -13,7 +13,7 @@ class LoginService {
         try {
             def credentials = sql.firstRow("""SELECT *
                                              FROM users
-                                             WHERE login=${params.login} AND password=${params.password}""")
+                                             WHERE login=${params.login} AND password=${params.password} AND is_active=true""")
             return credentials
         }
 
