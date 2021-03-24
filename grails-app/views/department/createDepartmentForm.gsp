@@ -40,8 +40,8 @@
                 <label class="form-label">Όνομα</label>
                 <input name="department_name" class="form-control" required="true" maxlength="10"><br/>
             </div>
-            <g:actionSubmit type="submit" class="btn btn-primary" value="Δημιουργία" action="createDepartment"/>
         </g:form>
+        <g:actionSubmit type="submit" class="btn btn-primary" value="Δημιουργία" action="createDepartment"/>
     </div>
 
 </body>

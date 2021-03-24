@@ -44,16 +44,15 @@ ${allDepartments}<br><br>
                 <th scope="col">Επιλογές</th>
             </tr>
         </thead>
+
         <tbody>
+
             <g:each var="department" in="${allDepartments}">
+
                 <tr>
                     <th scope="row">${department.department_id}</th>
                     <th scope="row">${department.department_name}</th>
                     <td>
-                        <g:link controller="department" action="createDepartmentForm"
-                                params="[department_name: department.department_name]">
-                            <g:actionSubmit type="submit" class="btn btn-primary" value="Δημιουργία Department" action="createDepartmentForm"/>
-                        </g:link>
                         <g:link controller="department" action="updateDepartmentForm"
                                     params="[department_name: department.department_name, department_id: department.department_id]">
                             <g:actionSubmit type="submit" class="btn btn-primary" value="Ενημέρωση" action="updateDepartmentForm"/>
@@ -68,7 +67,9 @@ ${allDepartments}<br><br>
             </g:each>
         </tbody>
     </table>
-
+        <g:link controller="department" action="createDepartmentForm" params="department_name">
+            <g:actionSubmit type="submit" class="btn btn-primary" value="Δημιουργία Department" action="createDepartmentForm"/>
+        </g:link>
 <br><br><br>
       <g:link controller="employee" action="viewEmployees">
           <g:actionSubmit type="submit" class="btn btn-primary" value="Employees" action="viewEmployees"/>
