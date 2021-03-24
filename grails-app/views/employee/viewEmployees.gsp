@@ -16,11 +16,8 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="/departments">Etaireia</a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <g:link url ="/"><a class="nav-link active" aria-current="page" href="#">Home</a></g:link>
-                </li>
-                <li class="nav-item">
+            <ul class="navbar-nav">
+                <li class="nav-item" style="padding-left: 2700%">
                     <g:link class="graphic" url = "/login/logout">Logout</g:link>
                 </li>
             </ul>

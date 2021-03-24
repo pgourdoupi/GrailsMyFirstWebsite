@@ -15,15 +15,11 @@
     <nav class="navbar navbar-expand navbar-white fixed-top bg-white">
         <div class="container-fluid">
             <a class="navbar-brand" href="\departments">Etaireia</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="graphic">
-                        <g:link class="nav-link active" url = "/login/logout">Logout</g:link>
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="padding-left: 2700%">
+                        <g:link class="graphic" url = "/login/logout">Logout</g:link>
                     </li>
-
                 </ul>
             </div>
         </div>
