@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand navbar-white fixed-top bg-white">
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
     <div class="container-fluid">
         <a class="navbar-brand" href="/departments">Εταιρεία</a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -24,30 +24,25 @@
     </div>
 </nav>
 
-<style>
-body {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("https://www.peristeria.gr/userfiles/image/genika/pexels-photo.jpg");
-}
-</style>
 
-<div class="container" style="width: 30%; margin-top: 15%; margin-left:15%">
-    <h2>Ενημέρωση στοιχείων τμήματος</h2>
-        <g:form name="createDepartmentForm" controller="Department" action="updateDepartment">
-                <div class="mb-3">
-                    <label class="form-label" for="department_id">Κωδικός τμήματος</label>
-                    <input id="department_id" name="department_id" class="form-control" required="true"
-                        value="${departmentInformation.department_id}" readonly><br/>
-                </div>
 
-                <div class="mb-3">
-                    <label class="form-label" for="department_name">Νέο Όνομα τμήματος</label>
-                    <input id="department_name" name="department_name" class="form-control" required="true"
-                           value="${departmentInformation.department_name}"><br/>
-                </div>
-                <g:submitButton type="submit" class="btn btn-primary" name="Ενημέρωση" action="updateDepartment"/>
-        </g:form>
-</div>
+     <div class="container" style="width: 30%; margin-top: 15%; margin-left:15%">
+        <h2>Ενημέρωση στοιχείων τμήματος</h2>
+            <g:form name="createDepartmentForm" controller="Department" action="updateDepartment">
+                    <div class="mb-3">
+                        <label class="form-label" for="department_id">Κωδικός τμήματος</label>
+                        <input id="department_id" name="department_id" class="form-control" required="true"
+                            value="${departmentInformation.department_id}" readonly><br/>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="department_name">Νέο Όνομα τμήματος</label>
+                        <input id="department_name" name="department_name" class="form-control" required="true"
+                               value="${departmentInformation.department_name}"><br/>
+                    </div>
+                    <g:submitButton type="submit" class="btn btn-primary" name="Ενημέρωση" action="updateDepartment"/>
+            </g:form>
+     </div>
+
 </body>
 </html>

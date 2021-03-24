@@ -12,7 +12,8 @@
 
 <br><br><br>
  <body>
-       <div class="container" style="width: 300px">
+ <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+       <div class="container" style="width: 200px">
             <g:form class="loginForm" controller="login" action="doLogin">
                 <h2>Login</h2>
                 <div class="form-group">
@@ -23,22 +24,12 @@
                     <label class="form-label">Password</label>
                     <input type="password" placeholder="Enter password" required type="password" name="password">
                 </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="dropdownCheck2">
-                    <label class="form-check-label" for="dropdownCheck2">
-                        Remember me
-                    </label>
+                <div class="form-group">
                     <a class="dropdown-item" href="#/">Forgot password?</a>
                 </div>
                 <g:actionSubmit type="submit" class="btn btn-primary" value="Είσοδος" action="doLogin"/>
             </g:form>
-      <style>
-            body {
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-image: url("https://www.peristeria.gr/userfiles/image/genika/pexels-photo.jpg");
-            }
-      </style>
 
+ </nav>
  </body>
 </html>

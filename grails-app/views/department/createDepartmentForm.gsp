@@ -11,7 +11,7 @@
 </head>
 
  <body>
-            <nav class="navbar navbar-expand navbar-white fixed-top bg-white">
+ <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/departments">Εταιρεία</a>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -20,18 +20,9 @@
                                 <g:link class="graphic" url = "/login/logout">Logout</g:link>
                             </li>
                         </ul>
-
                     </div>
                 </div>
-            </nav>
-
-    <style>
-        body{
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-image: url("https://www.peristeria.gr/userfiles/image/genika/pexels-photo.jpg");
-        }
-    </style>
+ </nav>
 
     <div class="container" style="margin-left: 10%; margin-top: 2%; padding:0%; width: 30%"><br><br>
         <h2>Δημιουργία νέου τμήματος</h2>

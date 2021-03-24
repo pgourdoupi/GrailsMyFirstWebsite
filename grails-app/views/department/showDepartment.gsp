@@ -9,8 +9,8 @@
     <head>
         <asset:stylesheet src="bootstrap.min.css"/>
     </head>
-  <body>
-        <nav class="navbar navbar-expand navbar-white fixed-top bg-white">
+<body>
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="\departments">Εταιρεία</a>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -21,17 +21,8 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+  </nav>
 
-    <style>
-        body {
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-image: url("https://www.peristeria.gr/userfiles/image/genika/pexels-photo.jpg");
-        }
-    </style>
-
-   ${allDepartments}<br><br>
     <h3>Παρακάτω φαίνονται τα τμήματα:</h3>
     <h3 style="margin-left: 10%; margin-top: 2%; padding:0%" ></h3>
     <table class="table">
@@ -64,7 +55,7 @@
                 </tr>
             </g:each>
         </tbody>
-    </table>
+     </table>
         <g:link controller="department" action="createDepartmentForm" params="department_name">
             <g:actionSubmit type="submit" class="btn btn-primary" value="Δημιουργία τμήματος" action="createDepartmentForm"/>
         </g:link>
