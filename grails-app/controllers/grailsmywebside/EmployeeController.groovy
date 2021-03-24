@@ -2,13 +2,13 @@ package grailsmywebside
 
 class EmployeeController {
 
-    def EmployeeService
+    def employeeService
     def departmentService
 
 
     // gia na ftiaxoyme ena employee
     def createEmployee() {
-        EmployeeService.createEmployee(params)
+        employeeService.createEmployee(params)
         redirect(action:"viewEmployees")
     }
 
@@ -36,7 +36,7 @@ class EmployeeController {
 
     //gia na diagrapsoyme ena department
     def deleteEmployee() {
-        EmployeeService.deleteEmployee(params)
+        employeeService.deleteEmployee(params)
         redirect(action:'viewEmployees')
     }
 }
