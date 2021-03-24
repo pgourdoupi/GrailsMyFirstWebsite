@@ -53,7 +53,6 @@ class EmployeeService {
 
         }
     }
-
     def deleteEmployee(params) {
         def sql = new Sql(dataSource)
         try {
