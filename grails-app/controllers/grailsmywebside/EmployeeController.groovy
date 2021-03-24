@@ -15,7 +15,7 @@ class EmployeeController {
     def createEmployeeForm() {
     }
 
-    //gia na kanoyme read ola ta departments
+    //gia na kanoyme read ola toys employees
     def viewEmployees() {
         def allEmployees = employeeService.getAllEmployees()
         [allEmployees: allEmployees]
@@ -27,14 +27,14 @@ class EmployeeController {
         redirect(action: "viewEmployees")
     }
 
-    //gia na kanoyme update se department
+    //gia na kanoyme update se employee
     def updateEmployeeForm() {
         def employeeInformation = [employee_id:params.employee_id, department_id:params.department_id, first_name: params.first_name,
                                    last_name: params.last_name, afm: params.afm, dob: params.dob]
         [employeeInformation: employeeInformation]
     }
 
-    //gia na diagrapsoyme ena department
+    //gia na diagrapsoyme enan employee
     def deleteEmployee() {
         employeeService.deleteEmployee(params)
         redirect(action:'viewEmployees')

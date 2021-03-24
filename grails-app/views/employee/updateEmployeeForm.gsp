@@ -33,12 +33,12 @@
                     <div class="mb-3">
                         <label class="form-label" for="employee_id">Κωδικός υπαλλήλου</label>
                         <input id="employee_id" name="employee_id" class="form-control" required="true"
-                               value="${employeeInformation.employee_id}" maxlength="15"><br/>
+                               value="${employeeInformation.employee_id}" readonly maxlength="15"><br/>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="department_id">Κωδικός τμήματος</label>
-                        <input id="department_id" name="department_id" class="form-control" required="true"
-                               value="${employeeInformation.department_id}" maxlength="15"><br/>
+                        <label class="form-label" for="department_name">Όνομα τμήματος</label>
+                        <input id="department_name" name="department_name" class="form-control" required="true"
+                               value="${employeeInformation.department_name}" maxlength="15"><br/>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="first_name">Όνομα</label>
@@ -64,7 +64,7 @@
                     </div>
 
 
-                    <g:submitButton type="submit" class="btn btn-primary" name="Ενημέρωση" action="updateEmployee"</g:submitButton>
+                    <g:submitButton type="submit" class="btn btn-primary" name="Ενημέρωση" action="updateEmployeeForm"/>
                 </g:form>
             </div>
 

@@ -37,7 +37,7 @@
                     <th scope="col">Επώνυμο</th>
                     <th scope="col">Ημερομηνία γέννησης</th>
                     <th scope="col">ΑΦΜ</th>
-                    <th scope="col">Κωδικός τμήματος</th>
+                     <th scope="col">Όνομα τμήματος</th>
                     <th scope="col">Επιλογές</th>
                 </tr>
                 </thead>
@@ -49,14 +49,14 @@
                         <th scope="row">${employees.last_name}</th>
                         <th scope="row">${employees.dob}</th>
                         <th scope="row">${employees.afm}</th>
-                        <th scope="row">${employees.department_id}</th>
+                        <th scope="row">${employees.department_name}</th>
                         <td>
                             <g:link controller="Employee" action="updateEmployeeForm"
                                     params="[employee_id: employees.employee_id, first_name: employees.first_name, last_name: employees.last_name,
-                                             dob: employees.dob, afm: employees.afm, department_id: employees.department_id]">
+                                             dob: employees.dob, afm: employees.afm, department_name: employees.department_name]">
                                 <g:actionSubmit type="submit" class="btn btn-primary" value="Ενημέρωση" action="updateEmployeeForm"/>
                             </g:link>
-                            <g:link controller="Employee" action="deleteEmployee" params="[employee_id: employees.employee_id]">
+                            <g:link controller="Employee" action="deleteEmployee" params="[employee_id: allEmployees.employee_id]">
                                 <g:actionSubmit type="submit" class="btn btn-primary" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" value="Διαγραφή" action="viewEmployees"/>
                             </g:link>
                         </td>
