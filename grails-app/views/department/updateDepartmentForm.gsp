@@ -46,7 +46,7 @@ body {
                     <input id="department_name" name="department_name" class="form-control" required="true"
                            value="${departmentInformation.department_name}"><br/>
                 </div>
-                <g:submitButton type="submit" class="btn btn-primary" name="Ενημέρωση">action="updateDepartment"</g:submitButton>
+                <g:submitButton type="submit" class="btn btn-primary" name="Ενημέρωση" action="updateDepartment"/>
         </g:form>
 </div>
 </body>
