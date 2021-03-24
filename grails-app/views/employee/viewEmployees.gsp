@@ -34,8 +34,7 @@
     </div>
 </div>
 </nav>
-
-${allEmployees}<br><br>
+<br><br><br>
  <h3>Παρακάτω φαίνονται οι υπάλληλοι:</h3>
  <h3 style="margin-left: 5%; margin-top: 5%; padding:0%" ></h3>
  <table class="table">
