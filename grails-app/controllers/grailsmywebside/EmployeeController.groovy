@@ -34,11 +34,6 @@ class EmployeeController {
         [employeeInformation: employeeInformation]
     }
 
-   /* def updateEmployeeById(){
-        employeeService.updateEmployee(params)
-        redirect (action: "viewEmployees")
-    }*/
-
     //gia na diagrapsoyme ena department
     def deleteEmployee() {
         EmployeeService.deleteEmployee(params)
