@@ -37,8 +37,8 @@
         <h2>Δημιουργία νέου τμήματος</h2>
         <g:form name="createDepartmentForm" controller="department" action="createDepartment">
             <div class="mb-3">
-                <label class="form-label">Όνομα</label>
-                <input name="department_name" class="form-control" required="true" maxlength="10"><br/>
+                <label class="form-label" for="department_name">Όνομα</label>
+                <input id="department_name" name="department_name" class="form-control" required="true" maxlength="10"><br/>
             </div>
         </g:form>
         <g:actionSubmit type="submit" class="btn btn-primary" value="Δημιουργία" action="createDepartment"/>

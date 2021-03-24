@@ -36,14 +36,14 @@ body {
     <h2>Ενημέρωση στοιχείων τμήματος</h2>
         <g:form name="createDepartmentForm" controller="Department" action="updateDepartment">
                 <div class="mb-3">
-                    <label class="form-label">Κωδικός τμήματος</label>
-                    <input name="department_id" class="form-control" required="true"
+                    <label class="form-label" for="department_id">Κωδικός τμήματος</label>
+                    <input id="department_id" name="department_id" class="form-control" required="true"
                         value="${departmentInformation.department_id}" readonly><br/>
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">Νέο Όνομα τμήματος</label>
-                    <input name="department_name" class="form-control" required="true"
+                    <label class="form-label" for="department_name">Νέο Όνομα τμήματος</label>
+                    <input id="department_name" name="department_name" class="form-control" required="true"
                            value="${departmentInformation.department_name}"><br/>
                 </div>
                 <g:submitButton type="submit" class="btn btn-primary" name="Ενημέρωση">action="updateDepartment"</g:submitButton>

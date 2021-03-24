@@ -37,35 +37,35 @@ body {
     <h2>Ενημέρωση στοιχείων υπαλλήλου</h2>
     <g:form name="createEmployeeForm" controller="Employee" action="updateEmployee">
         <div class="mb-3">
-            <label class="form-label">Κωδικός υπαλλήλου</label>
-            <input name="employee_id" class="form-control" required="true"
+            <label class="form-label" for="employee_id">Κωδικός υπαλλήλου</label>
+            <input id="employee_id" name="employee_id" class="form-control" required="true"
                    value="${employeeInformation.employee_id}" maxlength="15"><br/>
         </div>
         <div class="mb-3">
-            <label class="form-label">Κωδικός τμήματος</label>
-            <input name="department_id" class="form-control" required="true"
+            <label class="form-label" for="department_id">Κωδικός τμήματος</label>
+            <input id="department_id" name="department_id" class="form-control" required="true"
                    value="${employeeInformation.department_id}" maxlength="15"><br/>
         </div>
         <div class="mb-3">
-            <label class="form-label">Όνομα</label>
-            <input name="first_name" class="form-control" required="true"
+            <label class="form-label" for="first_name">Όνομα</label>
+            <input id="first_name" name="first_name" class="form-control" required="true"
                    value="${employeeInformation.first_name}" maxlength="15"><br/>
         </div>
 
         <div class="mb-3">
-            <label class="form-label">Επώνυμο</label>
-            <input name="last_name" class="form-control" required="true"
+            <label class="form-label" for="last_name">Επώνυμο</label>
+            <input id="last_name" name="last_name" class="form-control" required="true"
                    value="${employeeInformation.last_name}" maxlength="15"><br/>
         </div>
 
         <div class="mb-3">
-            <label class="form-label">ΑΦΜ</label>
-            <input name="afm" class="form-control" required="true"
+            <label class="form-label" for="afm">ΑΦΜ</label>
+            <input id="afm" name="afm" class="form-control" required="true"
                    value="${employeeInformation.afm}" maxlength="9"><br/>
         </div>
         <div class="mb-3">
-            <label class="form-label">Ημερομηνία Γέννησης</label>
-            <input name="dob" class="form-control" required="true"
+            <label class="form-label" for="dob">Ημερομηνία Γέννησης</label>
+            <input id="dob" name="dob" class="form-control" required="true"
                    value="${employeeInformation.dob}" maxlength="15"><br/>
         </div>
 
