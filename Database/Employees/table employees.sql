@@ -1,4 +1,3 @@
-
 CREATE TABLE employees(
    employee_id BIGSERIAL PRIMARY KEY NOT NULL,
    first_name VARCHAR(50),
