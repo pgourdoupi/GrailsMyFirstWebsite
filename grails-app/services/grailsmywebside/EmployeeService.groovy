@@ -29,7 +29,7 @@ class EmployeeService {
         try{
             return sql.execute("""INSERT 
                                   INTO employees(first_name,last_name,afm,dob) 
-                                  VALUES ('${params.department_id}','${params.first_name}','${params.last_name}','${params.afm}','${params.dob}')""")
+                                  VALUES (${params.department_id}, ${params.first_name}, ${params.last_name}, ${params.afm}, ${params.dob})""")
         }
         catch (Exception e) {
             e.printStackTrace()
@@ -44,9 +44,9 @@ class EmployeeService {
         def sql = new Sql(dataSource)
         try {
             return sql.execute("""UPDATE employees
-                                  SET first_name ='$params.first_name',last_name ='$params.last_name',
-                                      afm = '$params.afm', dob ='$params.dob', department_id ='$params.department_id'
-                                  WHERE  employee_id ='$params.employee_id'""")
+                                  SET first_name=$params.first_name,last_name=$params.last_name,
+                                      afm=$params.afm, dob=$params.dob, department_id=$params.department_id
+                                  WHERE  employee_id=$params.employee_id""")
         }
         catch (Exception e) {
             e.printStackTrace()
@@ -59,7 +59,7 @@ class EmployeeService {
         try {
             return sql.execute("""DELETE 
                                   FROM employees 
-                                  WHERE employee_id = '${params.employee_id}'""")
+                                  WHERE employee_id=${params.employee_id}""")
         }
         catch (Exception e) {
             e.printStackTrace()
