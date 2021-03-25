@@ -29,9 +29,8 @@ class EmployeeController {
     //gia na kanoyme update se employee
     def updateEmployeeForm() {
         def departments = departmentService.getAllDepartments()
-        def employeeInformation = [department_name:params.department_name,employee_id:params.employee_id,
-                                   first_name: params.first_name,
-                                   last_name: params.last_name, afm: params.afm, dob: params.dob, departments:departments]
+        def employeeInformation = [employee_id:params.employee_id, first_name: params.first_name,
+                                   last_name: params.last_name, afm: params.afm, dob:params.dob, departments:departments]
         [employeeInformation: employeeInformation]
     }
 

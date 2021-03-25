@@ -31,13 +31,13 @@ class DepartmentService {
         }
     }
 
-
     def updateDepartment(params) {
+        def department_id = params.department_id.toInteger()
         def sql = new Sql(dataSource)
         try {
             return sql.execute("""UPDATE department
                                   SET department_name=$params.department_name
-                                  WHERE department_id=$params.department_id""")
+                                  WHERE department_id=$department_id""")
         }
         catch (Exception e) {
             e.printStackTrace()
@@ -46,10 +46,11 @@ class DepartmentService {
     }
 
     def deleteDepartment(params) {
+        def department_id = params.department_id.toInteger()
         def sql = new Sql(dataSource)
         try {
             return sql.execute("""DELETE FROM department 
-                                  WHERE department_id=${params.department_id}""")
+                                  WHERE department_id=${department_id}""")
 
         }
         catch (Exception e) {

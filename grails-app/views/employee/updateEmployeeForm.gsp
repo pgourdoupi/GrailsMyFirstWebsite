@@ -36,9 +36,9 @@
                     <div class="mb-3">
                         <label class="form-label" for="department_id">Όνομα τμήματος</label>
                         <select id="department_id" name="department_id" class="form-select" aria-label="Default select example">
-                            <option name="department_id" value="${employeeInformation.department_name}"></option>
+                            <option name="department_id" value="${employeeInformation.department_id}"></option>
                             <g:each var="departments" in="${employeeInformation.departments}">
-                                <option name="department_name" value="${departments.department_name}">${departments.department_name}</option>
+                                <option name="department_id" value="${departments.department_id}">${departments.department_name}</option>
                             </g:each>
                         </select>
                     </div>

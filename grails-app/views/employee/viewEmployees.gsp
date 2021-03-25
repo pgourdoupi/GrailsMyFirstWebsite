@@ -53,11 +53,11 @@
                         <td>
                             <g:link controller="Employee" action="updateEmployeeForm"
                                     params="[employee_id: employee.employee_id, first_name: employee.first_name, last_name: employee.last_name,
-                                             dob: employee.dob, afm: employee.afm, department_name: employee.department_name]">
+                                             dob: employee.dob, afm: employee.afm]">
                                 <g:actionSubmit type="submit" class="btn btn-primary" value="Ενημέρωση" action="updateEmployeeForm"/>
                             </g:link>
                             <g:link controller="Employee" action="deleteEmployee" params="[employee_id: employee.employee_id]">
-                                <g:actionSubmit type="submit" class="btn btn-primary" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" value="Διαγραφή" action="viewEmployees"/>
+                                <g:actionSubmit type="submit" class="btn btn-primary" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" value="Διαγραφή" action="deleteEmployee"/>
                             </g:link>
                         </td>
                     </tr>
@@ -67,7 +67,5 @@
                     <g:link controller="employee" action="createEmployeeForm">
                         <g:actionSubmit type="submit" class="btn btn-primary" value="Δημιουργία" action="createEmployeeForm"/>
                     </g:link>
-
-
  </body>
 </html>

@@ -30,8 +30,8 @@
                 <h2>Προσθήκη υπαλλήλου</h2>
                 <g:form name="createEmployeeForm" controller="employee" action="createEmployeeForm">
                     <div class="mb-3">
-                        <label class="form-label" for="department_name">Όνομα τμήματος</label>
-                        <input id="department_name" name="department_name" class="form-control" required="true"><br/>
+                        <label class="form-label" for="department_id">Όνομα τμήματος</label>
+                        <input id="department_id" name="department_id" class="form-control" required="true"><br/>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="first_name">Όνομα</label>

@@ -7,7 +7,7 @@
 <html>
 <head>
     <asset:stylesheet src="bootstrap.min.css"/>
-    <title>Δημιουργία Department</title>
+    <title>Δημιουργία Τμήματος</title>
 </head>
 
  <body>
