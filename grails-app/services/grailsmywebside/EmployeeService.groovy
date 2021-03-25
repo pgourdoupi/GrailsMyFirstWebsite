@@ -12,7 +12,7 @@ class EmployeeService {
     def getAllEmployees() {
         def sql = new Sql(dataSource)
         try {
-            return sql.rows("""SELECT *,                                 
+            return sql.rows("""SELECT * ,                                 
                                    to_char(dob, 'DD-MM-YYYY') as dob    
                                   FROM employees,department
                                   WHERE department.department_id = employees.department_id""")
