@@ -23,7 +23,6 @@ class EmployeeController {
 
     def updateEmployee(){
         employeeService.updateEmployee(params)
-        departmentService.updateDepartment(params)
         redirect(action:'viewEmployees')
     }
 
