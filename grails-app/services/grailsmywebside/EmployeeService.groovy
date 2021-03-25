@@ -33,8 +33,9 @@ class EmployeeService {
         def sql = new Sql(dataSource)
         try{
             return sql.execute("""INSERT 
-                                  INTO employees(first_name,last_name,afm,dob) 
-                                  VALUES (${params.department_id}, ${params.first_name}, ${params.last_name}, ${params.afm}, ${params.dob})""")
+                                  INTO employees(first_name,last_name,afm,dob,department_name) 
+                                  VALUES (${params.department_id}, ${params.first_name},
+                                           ${params.last_name}, ${params.afm}, ${params.dob}, ${params.department_name})""")
         }
         catch (Exception e) {
             e.printStackTrace()

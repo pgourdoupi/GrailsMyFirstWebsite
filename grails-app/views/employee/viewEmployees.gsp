@@ -10,20 +10,21 @@
     <asset:stylesheet src="bootstrap.min.css"/>
     <title>Employees</title>
 </head>
-    <nav class="navbar navbar-expand-sm bg-white navbar-white">
-        <!-- Brand -->
-        <ul class="navbar-nav">
-            <a class="navbar-brand" href="">Εταιρεία</a>
-            <div class="collapse navbar-collapse" id="navbarCollapse"></div>
-        </li>
-        </ul>
-        <!-- Links -->
-        <ul class="navbar-nav">
-            <li class="nav-item" style="padding-left: 2700%">
-                <g:link class="graphic" url = "/login/logout">Logout</g:link>
+  <body>
+        <nav class="navbar navbar-expand-sm bg-white navbar-white">
+            <!-- Brand -->
+            <ul class="navbar-nav">
+                <a class="navbar-brand" href="">Εταιρεία</a>
+                <div class="collapse navbar-collapse" id="navbarCollapse"></div>
             </li>
-        </ul>
-    </nav>
+            </ul>
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item" style="padding-left: 2700%">
+                    <g:link class="graphic" url = "/login/logout">Logout</g:link>
+                </li>
+            </ul>
+        </nav>
 
             <br><br><br>
              <h3>Παρακάτω φαίνονται οι υπάλληλοι:</h3>
@@ -41,21 +42,21 @@
                 </tr>
                 </thead>
                 <tbody>
-                <g:each var="employees" in="${allEmployees}">
+                <g:each var="employee" in="${allEmployees}">
                     <tr>
-                        <th scope="row">${employees.employee_id}</th>
-                        <th scope="row">${employees.first_name}</th>
-                        <th scope="row">${employees.last_name}</th>
-                        <th scope="row">${employees.dob}</th>
-                        <th scope="row">${employees.afm}</th>
-                        <th scope="row">${employees.department_name}</th>
+                        <th scope="row">${employee.employee_id}</th>
+                        <th scope="row">${employee.first_name}</th>
+                        <th scope="row">${employee.last_name}</th>
+                        <th scope="row">${employee.dob}</th>
+                        <th scope="row">${employee.afm}</th>
+                        <th scope="row">${employee.department_name}</th>
                         <td>
                             <g:link controller="Employee" action="updateEmployeeForm"
-                                    params="[employee_id: employees.employee_id, first_name: employees.first_name, last_name: employees.last_name,
-                                             dob: employees.dob, afm: employees.afm, department_name: employees.department_name]">
+                                    params="[employee_id: employee.employee_id, first_name: employee.first_name, last_name: employee.last_name,
+                                             dob: employee.dob, afm: employee.afm, department_name: employee.department_name]">
                                 <g:actionSubmit type="submit" class="btn btn-primary" value="Ενημέρωση" action="updateEmployeeForm"/>
                             </g:link>
-                            <g:link controller="Employee" action="deleteEmployee" params="[employee_id: allEmployees.employee_id]">
+                            <g:link controller="Employee" action="deleteEmployee" params="[employee_id: employee.employee_id]">
                                 <g:actionSubmit type="submit" class="btn btn-primary" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" value="Διαγραφή" action="viewEmployees"/>
                             </g:link>
                         </td>
@@ -68,5 +69,5 @@
                     </g:link>
 
 
-</body>
+ </body>
 </html>

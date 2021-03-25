@@ -24,13 +24,15 @@ class EmployeeController {
     def updateEmployee(){
         employeeService.updateEmployee(params)
         departmentService.updateDepartment(params)
-        redirect(action: "viewEmployees")
+        redirect(action:'viewEmployees')
     }
 
     //gia na kanoyme update se employee
     def updateEmployeeForm() {
-        def employeeInformation = [employee_id:params.employee_id, department_id:params.department_id, first_name: params.first_name,
-                                   last_name: params.last_name, afm: params.afm, dob: params.dob, department_name:params.department_name]
+        def departments = departmentService.getAllDepartments()
+        def employeeInformation = [department_name:params.department_name,employee_id:params.employee_id,
+                                   first_name: params.first_name,
+                                   last_name: params.last_name, afm: params.afm, dob: params.dob, departments:departments]
         [employeeInformation: employeeInformation]
     }
 
