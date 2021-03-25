@@ -12,7 +12,8 @@ class EmployeeService {
     def getAllEmployees() {
         def sql = new Sql(dataSource)
         try {
-            return sql.rows("""SELECT *
+            return sql.rows("""SELECT *,                                 
+                                   to_char(dob, 'DD-MM-YYYY') as dob    
                                   FROM employees,department
                                   WHERE department.department_id = employees.department_id""")
 
@@ -48,7 +49,7 @@ class EmployeeService {
         def sql = new Sql(dataSource)
         try {
             return sql.execute("""UPDATE employees
-                                  SET first_name=$params.first_name,last_name=$params.last_name,
+                                  SET first_name=$params.first_name,last_name=$params.last_name, department_name=$params.department_name,
                                       afm=$params.afm, dob=$params.dob, department_id=$params.department_id
                                   WHERE  employee_id=$params.employee_id""")
         }

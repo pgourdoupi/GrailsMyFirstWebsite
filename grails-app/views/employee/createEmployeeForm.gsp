@@ -11,20 +11,20 @@
 </head>
 
 <body>
-        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/departments">Εταιρεία</a>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item" style="padding-left: 2700%">
-                            <g:link class="graphic" url = "/login/logout">Logout</g:link>
-                        </li>
-                    </ul>
-                </div>
-
-
-            </div>
-        </nav>
+    <nav class="navbar navbar-expand-sm bg-white navbar-white">
+        <!-- Brand -->
+        <ul class="navbar-nav">
+            <a class="navbar-brand" href="">Εταιρεία</a>
+            <div class="collapse navbar-collapse" id="navbarCollapse"></div>
+        </li>
+        </ul>
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item" style="padding-left: 2700%">
+                <g:link class="graphic" url = "/login/logout">Logout</g:link>
+            </li>
+        </ul>
+    </nav>
 
 
             <div class="container" style="width: 30%; margin-left:15%;"><br><br><br>

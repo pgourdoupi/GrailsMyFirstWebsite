@@ -10,20 +10,20 @@
 </head>
 
 <body>
-        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/departments">Εταιρεία</a>
-
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item" style="padding-left: 2700%">
-                            <g:link class="graphic" url = "/login/logout">Logout</g:link>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-        </nav>
+    <nav class="navbar navbar-expand-sm bg-white navbar-white">
+        <!-- Brand -->
+        <ul class="navbar-nav">
+            <a class="navbar-brand" href="">Εταιρεία</a>
+            <div class="collapse navbar-collapse" id="navbarCollapse"></div>
+        </li>
+        </ul>
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item" style="padding-left: 2700%">
+                <g:link class="graphic" url = "/login/logout">Logout</g:link>
+            </li>
+        </ul>
+    </nav>
 
 
 
@@ -37,8 +37,8 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="department_name">Όνομα τμήματος</label>
-                        <input id="department_name" name="department_name" class="form-control" required="true"
-                               value="${employeeInformation.department_name}" maxlength="15"><br/>
+                        <g:select class="form-control" id="department_id" name="department_name" from="${allDepartments}"
+                                  optionValue="${departmentInformation.department_name}" optionKey="department_id"/>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="first_name">Όνομα</label>
@@ -62,7 +62,6 @@
                         <input id="dob" name="dob" class="form-control" required="true"
                                value="${employeeInformation.dob}" maxlength="15"><br/>
                     </div>
-
 
                     <g:submitButton type="submit" class="btn btn-primary" name="Ενημέρωση" action="updateEmployeeForm"/>
                 </g:form>
