@@ -8,22 +8,29 @@
 <html>
     <head>
         <asset:stylesheet src="bootstrap.min.css"/>
+        <title>Departments</title>
     </head>
-  <body>
-        <nav class="navbar navbar-expand-sm bg-white navbar-white">
-            <!-- Brand -->
-            <ul class="navbar-nav">
-                <a class="navbar-brand" href="">Εταιρεία</a>
-                <div class="collapse navbar-collapse" id="navbarCollapse"></div>
-            </li>
-            </ul>
-            <!-- Links -->
-            <ul class="navbar-nav">
-                <li class="nav-item" style="padding-left: 2700%">
-                    <g:link class="graphic" url = "/login/logout">Logout</g:link>
-                </li>
-            </ul>
-        </nav>
+<body>
+  <nav class="navbar navbar-expand navbar-white bg-white">
+      <a class="navbar-brand" href="#">Εταιρεία</a>
+      <div class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-5 my-2 my-md-0">
+          <div class="collapse navbar-collapse">
+              <div class ="sb-nav-link-icon"> <i class="bi bi-person" style="font-size: 1rem; color: #a6adb8"></i></div>
+              <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                      <a class="dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
+                          ${session ['user']}
+                      </a>
+                      <div class="dropdown-item" aria-labelledby="navbarDropdownMenuLink">
+                          <g:link controller="Login" action="logout">Logout</g:link>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+
 
         <h3>Παρακάτω φαίνονται τα τμήματα:</h3>
         <h3 style="margin-left: 10%; margin-top: 2%; padding:0%" ></h3>
