@@ -41,6 +41,7 @@
                             <option name="department_id" value="${departments.department_id}">${departments.department_name}</option>
                         </g:each>
                     </select>
+
                     <div class="mb-3">
                         <label class="form-label" for="first_name">Όνομα</label>
                         <input id="first_name" name="first_name" class="form-control" required="true" maxlength="50"><br/>
