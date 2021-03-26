@@ -32,7 +32,7 @@
 
 <div class="container" style="width: 30%; margin-top: 15%; margin-left:15%">
         <h2>Ενημέρωση στοιχείων τμήματος</h2>
-            <g:form name="createDepartmentForm" controller="Department" action="updateDepartment">
+            <g:form name="createDepartmentForm" controller="department" action="updateDepartment">
                     <div class="mb-3">
                         <label class="form-label" for="department_id">Κωδικός τμήματος</label>
                         <input id="department_id" name="department_id" class="form-control" required="true"

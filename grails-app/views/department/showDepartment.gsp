@@ -8,7 +8,7 @@
 <html>
     <head>
         <asset:stylesheet src="bootstrap.min.css"/>
-        <title>Departments</title>
+        <title>Τμήματα</title>
     </head>
 <body>
   <nav class="navbar navbar-expand navbar-white bg-white">
@@ -29,8 +29,6 @@
           </div>
       </div>
   </nav>
-
-
 
         <h3>Παρακάτω φαίνονται τα τμήματα:</h3>
         <h3 style="margin-left: 10%; margin-top: 2%; padding:0%" ></h3>

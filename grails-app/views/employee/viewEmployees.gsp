@@ -56,8 +56,8 @@
                         <th scope="row">${employee.department_name}</th>
                         <td>
                             <g:link controller="Employee" action="updateEmployeeForm"
-                                    params="[employee_id: employee.employee_id, first_name: employee.first_name, last_name: employee.last_name,
-                                             dob: employee.dob, afm: employee.afm]">
+                                    params="[employee_id: employee.employee_id, first_name: employee.first_name,
+                                             last_name: employee.last_name, dob: employee.dob, afm: employee.afm]">
                                 <g:actionSubmit type="submit" class="btn btn-primary" value="Ενημέρωση" action="updateEmployeeForm"/>
                             </g:link>
                             <g:link controller="Employee" action="deleteEmployee" params="[employee_id: employee.employee_id]">

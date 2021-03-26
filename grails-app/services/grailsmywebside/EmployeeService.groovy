@@ -12,8 +12,12 @@ class EmployeeService {
     def getAllEmployees() {
         def sql = new Sql(dataSource)
         try {
-            return sql.rows("""SELECT * ,                                 
-                                   to_char(dob, 'DD-MM-YYYY') as dob    
+            return sql.rows("""SELECT   employee_id,
+                                        first_name,
+                                        last_name,
+                                        afm,
+                                        to_char(dob, 'DD-MM-YYYY') as dob,
+                                        department_name
                                   FROM employees,department
                                   WHERE department.department_id = employees.department_id""")
         }
@@ -23,7 +27,6 @@ class EmployeeService {
     }
 
     def createEmployee(params) {
-        def department_id = params.department_id.toInteger()
         def afm = params.afm.toInteger()
         def temp = params.dob.split("-")
         def new_date = temp[2] + "-" + temp[1] + "-" + temp[0]
@@ -32,7 +35,7 @@ class EmployeeService {
         try{
             return sql.execute("""INSERT 
                                   INTO employees(department_id,first_name,last_name,afm,dob) 
-                                  VALUES (${department_id},${params.first_name},${params.last_name},${afm},${dob})""")
+                                  VALUES (${params.department_id},${params.first_name},${params.last_name},${afm},${dob})""")
         }
         catch (Exception e) {
             e.printStackTrace()

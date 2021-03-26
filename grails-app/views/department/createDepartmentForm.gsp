@@ -30,18 +30,15 @@
              </div>
          </nav>
 
-
  <div class="container" style="margin-left: 10%; margin-top: 2%; padding:0%; width: 30%"><br><br>
             <h2>Δημιουργία νέου τμήματος</h2>
-            <g:form name="createDepartmentForm" controller="Department" action="createDepartment">
-                <select id="department_id" name="department_id" class="form-select" aria-label="Default select example">
-                    <option name="department_id" value="${departmentInfo.department_id}"></option>
-                    <g:each var="allDepartments" in="${departmentInfo.departments}">
-                        <option name="department_id" value="${allDepartments.department_id}">${allDepartments.department_name}</option>
-                    </g:each>
-                </select>
-            </g:form>
+     <g:form name="createDepartmentForm" controller="department" action="createDepartment">
+         <div class="mb-3">
+             <label class="form-label" for="department_name">Όνομα</label>
+             <input id="department_name" name="department_name" class="form-control" required="true" maxlength="10"><br/>
+         </div>
             <g:actionSubmit type="submit" class="btn btn-primary" value="Δημιουργία" action="createDepartment"/>
         </div>
+     </g:form>
  </body>
 </html>
