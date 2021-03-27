@@ -16,7 +16,7 @@ class EmployeeService {
                                         first_name,
                                         last_name,
                                         afm,
-                                        to_char(dob, 'DD-MM-YYYY') as dob,
+                                        to_char(dob,'DD-MM-YYYY') as dob,
                                         department_name
                                   FROM employees,department
                                   WHERE department.department_id = employees.department_id""")
