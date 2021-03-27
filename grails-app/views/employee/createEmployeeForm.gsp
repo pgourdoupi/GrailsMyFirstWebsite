@@ -30,14 +30,14 @@
              </div>
          </nav>
 
-${departments}
+
  <div class="container" style="width: 30%; margin-left:15%;"><br><br><br>
                 <h2>Προσθήκη υπαλλήλου</h2>
                 <g:form name="createEmployeeForm" controller="employee" action="createEmployee">
                     <label class="form-label" for="department_id">Όνομα τμήματος</label>
-                    <select id="department_id" name="department_name" class="form-select" aria-label="Default select example">
-                        <g:each var="departments" in="${departments}">
-                            <option name="department_id" value="${departments.department_id}">${departments.department_name}</option>
+                    <select id="department_id" name="department_id" class="form-select" aria-label="Default select example">
+                        <g:each var="department" in="${departments}">
+                            <option name="department_id" value="${department.department_id}">${department.department_name}</option>
                         </g:each>
                     </select>
 

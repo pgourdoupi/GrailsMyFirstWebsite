@@ -27,8 +27,22 @@ class EmployeeService {
         }
     }
 
+    def DeptByEmployeeId(params){
+        def employee_id = params.employee_id.toInteger()
+        def sql =new Sql(dataSource)
+        try{
+            return sql.rows("""SELECT department_id
+                               FROM employees
+                               WHERE employee_id =$employee_id""")
+        }
+        catch (Exception e) {
+            e.printStackTrace()
+        }
+    }
+
     def createEmployee(params) {
         def afm = params.afm.toInteger()
+        def department_id = params.department_id.toInteger()
         def temp = params.dob.split("-")
         String new_date = temp[2]+ "-" + temp[1]+ "-" + temp[0]
         Date dob = Date.valueOf(new_date)
@@ -36,7 +50,7 @@ class EmployeeService {
         try{
             return sql.execute("""INSERT 
                                   INTO employees(department_id,first_name,last_name,afm,dob) 
-                                  VALUES (${params.department_id},${params.first_name},${params.last_name},${afm},${dob})""")
+                                  VALUES (${department_id},${params.first_name},${params.last_name},${afm},${dob})""")
         }
         catch (Exception e) {
             e.printStackTrace()
@@ -46,6 +60,7 @@ class EmployeeService {
     def updateEmployee(params) {
         def afm = params.afm.toInteger()
         def department_id = params.department_id.toInteger()
+        def employee_id = params.employee_id.toInteger()
         def temp = params.dob.split("-")
         String new_date = temp[2]+ "-" + temp[1]+ "-" + temp[0]
         Date dob = Date.valueOf(new_date)
@@ -54,8 +69,7 @@ class EmployeeService {
             return sql.executeUpdate("""UPDATE employees
                                   SET first_name=$params.first_name,last_name=$params.last_name,
                                       afm=$afm, dob=$dob, department_id=$department_id 
-                                  WHERE employee_id=$params.employee_id""")
-
+                                  WHERE employee_id=$employee_id""")
         }
         catch (Exception e) {
             e.printStackTrace()

@@ -21,6 +21,7 @@ class EmployeeController {
     def viewEmployees() {
         def allEmployees = employeeService.getAllEmployees()
         [allEmployees: allEmployees]
+
     }
 
     def updateEmployee(){
@@ -31,10 +32,12 @@ class EmployeeController {
     //gia na kanoyme update se employee
     def updateEmployeeForm() {
         def departments = departmentService.getAllDepartments()
-        def employeeInformation = [employee_id:params.employee_id, first_name: params.first_name,
-                                   last_name: params.last_name, afm: params.afm, dob:params.dob, departments:departments]
+        def departmentIdFromCurrentEmployee = employeeService.DeptByEmployeeId(params)
+        def employeeInformation = [employee_id:params.employee_id, first_name: params.first_name, department_name: params.department_name,
+                                   departmentIdFromCurrentEmployee:departmentIdFromCurrentEmployee[0],last_name: params.last_name, afm: params.afm, dob:params.dob, departments:departments]
         [employeeInformation: employeeInformation]
     }
+
 
     //gia na diagrapsoyme enan employee
     def deleteEmployee() {

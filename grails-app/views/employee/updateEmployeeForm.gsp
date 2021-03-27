@@ -29,7 +29,6 @@
             </div>
         </nav>
 
-
 <div class="container" style="width: 35%; margin-left:15%"><br><br>
                 <h2>Ενημέρωση στοιχείων υπαλλήλου</h2>
                 <g:form name="createEmployeeForm" controller="Employee" action="updateEmployee">
@@ -41,7 +40,7 @@
                     <div class="mb-3">
                         <label class="form-label" for="department_id">Όνομα τμήματος</label>
                         <select id="department_id" name="department_id" class="form-select" aria-label="Default select example">
-                            <option name="department_id" value="${employeeInformation.department_id}"></option>
+                            <option name="department_id" value="${employeeInformation.departmentIdFromCurrentEmployee.department_id}" select="selected">${employeeInformation.department_name}</option>
                             <g:each var="departments" in="${employeeInformation.departments}">
                                 <option name="department_id" value="${departments.department_id}">${departments.department_name}</option>
                             </g:each>
