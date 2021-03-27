@@ -4,7 +4,6 @@ import grails.gorm.transactions.Transactional
 import groovy.sql.Sql
 import java.sql.Date
 
-
 @Transactional
 class EmployeeService {
     def dataSource
