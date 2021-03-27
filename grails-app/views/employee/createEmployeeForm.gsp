@@ -30,38 +30,32 @@
              </div>
          </nav>
 
-
+${departments}
  <div class="container" style="width: 30%; margin-left:15%;"><br><br><br>
                 <h2>Προσθήκη υπαλλήλου</h2>
                 <g:form name="createEmployeeForm" controller="employee" action="createEmployee">
                     <label class="form-label" for="department_id">Όνομα τμήματος</label>
                     <select id="department_id" name="department_name" class="form-select" aria-label="Default select example">
-                        <option name="department_name" value="${employeeInformation.department_name}"></option>
-                        <g:each var="departments" in="${employeeInformation.departments}">
+                        <g:each var="departments" in="${departments}">
                             <option name="department_id" value="${departments.department_id}">${departments.department_name}</option>
                         </g:each>
                     </select>
 
                     <div class="mb-3">
                         <label class="form-label" for="first_name">Όνομα</label>
-                        <input id="first_name" name="first_name" class="form-control" required="true"
-                               value="${employeeInformation.first_name}"  maxlength="50"><br/>
+                        <input id="first_name" name="first_name" class="form-control" required="true" maxlength="50"><br/>
                     </div>
-
                     <div class="mb-3">
                         <label class="form-label" for="last_name">Επώνυμο</label>
-                        <input id="last_name" name="last_name" class="form-control" required="true"
-                               value="${employeeInformation.last_name}" maxlength="50"><br/>
+                        <input id="last_name" name="last_name" class="form-control" required="true" maxlength="50"><br/>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="afm">ΑΦΜ</label>
-                        <input id="afm" name="afm" class="form-control" required="true"
-                               value="${employeeInformation.afm}" maxlength="9"><br/>
+                        <input id="afm" name="afm" class="form-control" required="true" maxlength="9"><br/>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="dob">Ημερομηνία Γέννησης</label>
-                        <input id="dob" name="dob" class="form-control" required="true"
-                               value="${employeeInformation.dob}" placeholder="DD-MM-YYYY"/>
+                        <input id="dob" name="dob" class="form-control" required="true" placeholder="DD-MM-YYYY"/>
                     </div>
                     <g:actionSubmit type="button" class="btn btn-primary" value="Προσθήκη" action="createEmployee"/>
                 </g:form>

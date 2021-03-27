@@ -30,8 +30,8 @@ class EmployeeService {
     def createEmployee(params) {
         def afm = params.afm.toInteger()
         def temp = params.dob.split("-")
-        def new_date = temp[2]+ "-" + temp[1]+ "-" + temp[0]
-        def dob = Date.valueOf(new_date)
+        String new_date = temp[2]+ "-" + temp[1]+ "-" + temp[0]
+        Date dob = Date.valueOf(new_date)
         def sql = new Sql(dataSource)
         try{
             return sql.execute("""INSERT 
@@ -45,16 +45,17 @@ class EmployeeService {
 
     def updateEmployee(params) {
         def afm = params.afm.toInteger()
-        def department_id = params.department_id.toString()
+        def department_id = params.department_id.toInteger()
         def temp = params.dob.split("-")
-        def new_date = temp[2]+ "-" + temp[1]+ "-" + temp[0]
-        def dob = Date.valueOf(new_date)
+        String new_date = temp[2]+ "-" + temp[1]+ "-" + temp[0]
+        Date dob = Date.valueOf(new_date)
         def sql = new Sql(dataSource)
         try {
-            return sql.execute("""UPDATE employees
+            return sql.executeUpdate("""UPDATE employees
                                   SET first_name=$params.first_name,last_name=$params.last_name,
-                                      afm=$afm, dob=$dob, department_id=$department_id
-                                  WHERE  employee_id=$params.employee_id""")
+                                      afm=$afm, dob=$dob, department_id=$department_id 
+                                  WHERE employee_id=$params.employee_id""")
+
         }
         catch (Exception e) {
             e.printStackTrace()

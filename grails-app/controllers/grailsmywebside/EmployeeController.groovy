@@ -14,9 +14,7 @@ class EmployeeController {
 
     def createEmployeeForm() {
         def departments = departmentService.getAllDepartments()
-        def employeeInformation = [employee_id:params.employee_id, first_name: params.first_name,
-                                   last_name: params.last_name, afm: params.afm, dob:params.dob,departments:departments]
-        [employeeInformation: employeeInformation]
+        [departments:departments]
     }
 
     //gia na kanoyme read ola toys employees
