@@ -7,7 +7,6 @@ import java.sql.Date
 
 @Transactional
 class EmployeeService {
-
     def dataSource
 
     def getAllEmployees() {
@@ -73,9 +72,9 @@ class EmployeeService {
         }
         catch (Exception e) {
             e.printStackTrace()
-
         }
     }
+
     def deleteEmployee(params) {
         def employee_id = params.employee_id.toInteger()
         def sql = new Sql(dataSource)

@@ -5,7 +5,6 @@ class EmployeeController {
     def employeeService
     def departmentService
 
-
     // gia na ftiaxoyme ena employee
     def createEmployee() {
         employeeService.createEmployee(params)
@@ -21,7 +20,6 @@ class EmployeeController {
     def viewEmployees() {
         def allEmployees = employeeService.getAllEmployees()
         [allEmployees: allEmployees]
-
     }
 
     def updateEmployee(){
@@ -37,7 +35,6 @@ class EmployeeController {
                                    departmentIdFromCurrentEmployee:departmentIdFromCurrentEmployee[0],last_name: params.last_name, afm: params.afm, dob:params.dob, departments:departments]
         [employeeInformation: employeeInformation]
     }
-
 
     //gia na diagrapsoyme enan employee
     def deleteEmployee() {
