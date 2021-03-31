@@ -11,9 +11,6 @@ class DepartmentController {
     }
 
     def createDepartmentForm() {
-        def departments = departmentService.getAllDepartments()
-        def departmentInformation = [department_name: params.department_name, department_id: params.department_id, departments:departments]
-        [departmentInformation: departmentInformation]
     }
 
     //gia na doyme ola ta departments
