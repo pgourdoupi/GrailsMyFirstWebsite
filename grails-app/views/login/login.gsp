@@ -12,21 +12,22 @@
 
 <br><br><br>
  <body>
- <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-       <div class="container" style="width: 200px">
-            <g:form class="loginForm" controller="login" action="doLogin">
-                <h2>Login</h2>
-                <div class="form-group">
-                    <label class="form-label" for="login">Username</label>
-                    <input type="text" id="login" placeholder="Enter username" required type="text" name="login">
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter password" required type="password" name="password">
-                </div>
-                <g:actionSubmit type="submit" class="btn btn-primary" value="Είσοδος" action="doLogin"/>
-            </g:form>
+     <div class="container">
+            <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+                <g:form class="loginForm" controller="login" action="doLogin">
+                    <h2>Login</h2>
+                    <div class="form-group">
+                        <label class="form-label" for="login">Όνομα χρήστη</label>
+                        <input type="text" id="login" placeholder="Εισάγετε το όνομα σας" required type="text" name="login">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="password">Κωδικός</label>
+                        <input type="password" id="password" placeholder="Εισάγετε τον κωδικό σας" required type="password" name="password">
+                    </div>
+                    <g:actionSubmit type="submit" class="btn btn-primary" value="Είσοδος" action="doLogin"/>
+                </g:form>
 
- </nav>
+            </nav>
+     </div>
  </body>
 </html>
