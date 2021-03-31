@@ -24,9 +24,6 @@
                     <label class="form-label" for="password">Password</label>
                     <input type="password" id="password" placeholder="Enter password" required type="password" name="password">
                 </div>
-                <div class="form-group">
-                    <a class="dropdown-item" href="">Forgot password?</a>
-                </div>
                 <g:actionSubmit type="submit" class="btn btn-primary" value="Είσοδος" action="doLogin"/>
             </g:form>
 
