@@ -17,12 +17,12 @@
             <g:form class="loginForm" controller="login" action="doLogin">
                 <h2>Login</h2>
                 <div class="form-group">
-                    <label class="form-label">Username</label>
-                    <input type="text" placeholder="Enter username" required type="text" name="login">
+                    <label class="form-label" for="login">Username</label>
+                    <input type="text" id="login" placeholder="Enter username" required type="text" name="login">
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Password</label>
-                    <input type="password" placeholder="Enter password" required type="password" name="password">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required type="password" name="password">
                 </div>
                 <div class="form-group">
                     <a class="dropdown-item" href="">Forgot password?</a>
