@@ -23,6 +23,9 @@
                     <div class="form-group">
                         <label class="form-label" for="password">Κωδικός</label>
                         <input type="password" id="password" placeholder="Εισάγετε τον κωδικό σας" required type="password" name="password">
+                        <g:if test="${flash.message}">
+                            <div class="message" style="display: block">${flash.message}</div>
+                        </g:if>
                     </div>
                     <g:actionSubmit type="submit" class="btn btn-primary" value="Είσοδος" action="doLogin"/>
                 </g:form>
