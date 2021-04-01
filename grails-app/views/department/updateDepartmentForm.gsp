@@ -36,9 +36,7 @@
         </div>
     </nav>
 
-
-
-<div class="container" style="width: 30%; margin-top: 15%; margin-left:15%">
+<div class="container md-3 mt-3 border w-50">
         <h2>Ενημέρωση στοιχείων τμήματος</h2>
             <g:form name="createDepartmentForm" controller="department" action="updateDepartment">
                     <div class="mb-3">

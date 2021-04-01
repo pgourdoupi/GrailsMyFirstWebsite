@@ -37,7 +37,7 @@
     </nav>
 
 
-<div class="container" style="width: 30%; margin-left:15%;"><br><br><br>
+<div class="container md-3 mt-3 border w-50">
                 <h2>Προσθήκη υπαλλήλου</h2>
                 <g:form name="createEmployeeForm" controller="employee" action="createEmployee">
                     <label class="form-label" for="department_id">Όνομα τμήματος</label>

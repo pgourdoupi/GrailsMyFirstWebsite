@@ -12,24 +12,23 @@
 
 <br><br><br>
  <body>
-     <div class="container">
-            <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+     <div class="container mb-4 mt-4 col-4 border bg-info">
+            <nav class="navbar navbar-light">
                 <g:form class="loginForm" controller="login" action="doLogin">
                     <h2>Login</h2>
-                    <div class="form-group">
-                        <label class="form-label" for="login">Όνομα χρήστη</label>
-                        <input type="text" id="login" placeholder="Εισάγετε το όνομα σας" required type="text" name="login">
+                    <div class="form-group m-2">
+                        <label class="form-label" for="login">Όνομα χρήστη:</label>
+                        <input type="text" id="login" placeholder="Εισάγετε το όνομα σας" required name="login">
                     </div>
-                    <div class="form-group">
-                        <label class="form-label" for="password">Κωδικός</label>
-                        <input type="password" id="password" placeholder="Εισάγετε τον κωδικό σας" required type="password" name="password">
+                    <div class="form-group m-3">
+                        <label class="form-label" for="password">Κωδικός:</label>
+                        <input type="password" id="password" placeholder="Εισάγετε τον κωδικό σας" required name="password">
                         <g:if test="${flash.message}">
                             <div class="message" style="display: block">${flash.message}</div>
                         </g:if>
                     </div>
-                    <g:actionSubmit type="submit" class="btn btn-primary" value="Είσοδος" action="doLogin"/>
+                      <g:actionSubmit type="submit" class="btn btn-secondary" value="Είσοδος" action="doLogin"/>
                 </g:form>
-
             </nav>
      </div>
  </body>

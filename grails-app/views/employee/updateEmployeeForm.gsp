@@ -35,8 +35,7 @@
         </div>
     </nav>
 
-
- <div class="container" style="width: 35%; margin-left:15%"><br><br>
+ <div class="container md-3 mt-3 border w-50">
                 <h2>Ενημέρωση στοιχείων υπαλλήλου</h2>
                 <g:form name="createEmployeeForm" controller="Employee" action="updateEmployee">
                     <div class="mb-3">

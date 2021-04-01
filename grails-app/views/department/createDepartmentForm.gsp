@@ -36,15 +36,16 @@
         </div>
     </nav>
 
-<div class="container" style="margin-left: 10%; margin-top: 2%; padding:0%; width: 30%"><br><br>
-            <h2>Δημιουργία νέου τμήματος</h2>
-     <g:form name="createDepartmentForm" controller="department" action="createDepartment">
-         <div class="mb-3">
-             <label class="form-label" for="department_name">Όνομα</label>
-             <input id="department_name" name="department_name" class="form-control" required="true" maxlength="10"><br/>
-         </div>
-            <g:actionSubmit type="submit" class="btn btn-primary" value="Δημιουργία" action="createDepartment"/>
-        </div>
-     </g:form>
+    <div class="container md-3 mt-3 border w-50">
+                <h2>Δημιουργία νέου τμήματος</h2>
+         <g:form name="createDepartmentForm" controller="department" action="createDepartment">
+             <div class="mb-3">
+                 <label class="form-label" for="department_name">Όνομα</label>
+                 <input id="department_name" name="department_name" class="form-control" required="true" maxlength="10"><br/>
+             </div>
+                <g:actionSubmit type="submit" class="btn btn-primary" value="Δημιουργία" action="createDepartment"/>
+         </g:form>
+    </div>
+
  </body>
 </html>
