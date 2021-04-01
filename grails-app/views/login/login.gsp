@@ -7,7 +7,7 @@
 <html>
     <head>
         <asset:stylesheet src="bootstrap.min.css"/>
-        <title>Login</title>
+        <title>Είσοδος</title>
     </head>
 
 <br><br><br>
