@@ -18,11 +18,11 @@
                     <h3>Σύνδεση</h3>
                     <div class="form-group">
                         <label class="form-label" for="login">Όνομα χρήστη:</label>
-                        <input type="text" class="form-control" id="login" placeholder="Εισάγετε το όνομα σας"/>
+                        <input type="text" class="form-control" id="login" placeholder="Εισάγετε το όνομα σας" name="login"/>
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="password">Κωδικός:</label>
-                        <input type="password" class="form-control" id="password" placeholder="Εισάγετε τον κωδικό σας"/>
+                        <input type="password" class="form-control" id="password" placeholder="Εισάγετε τον κωδικό σας" name="password"/>
                         <g:if test="${flash.message}">
                             <div class="message" style="display: block">${flash.message}</div>
                         </g:if>
