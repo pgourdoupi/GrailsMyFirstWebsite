@@ -15,7 +15,7 @@
      <div class="container mb-4 mt-4 col-4 border bg-info">
             <nav class="navbar navbar-light">
                 <g:form class="loginForm" controller="login" action="doLogin">
-                    <h2>Login</h2>
+                    <h2>Σύνδεση</h2>
                     <div class="form-group m-2">
                         <label class="form-label" for="login">Όνομα χρήστη:</label>
                         <input type="text" id="login" placeholder="Εισάγετε το όνομα σας" required name="login">

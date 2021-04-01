@@ -29,7 +29,7 @@
                         ${session ['user']}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <g:link controller="Login" action="logout" class="dropdown-item">Logout</g:link>
+                        <g:link controller="Login" action="logout" class="dropdown-item">Έξοδος</g:link>
                     </div>
                 </li>
             </ul>
