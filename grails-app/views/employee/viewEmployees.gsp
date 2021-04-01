@@ -6,29 +6,36 @@
 --%>
 
 <html>
-<head>
-    <asset:stylesheet src="bootstrap.min.css"/>
-    <title>Employees</title>
-</head>
-  <body>
-          <nav class="navbar navbar-expand navbar-white bg-white">
-              <a class="navbar-brand" href="#">Εταιρεία</a>
-              <div class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-5 my-2 my-md-0">
-                  <div class="collapse navbar-collapse">
-                      <div class ="sb-nav-link-icon"> <i class="bi bi-person" style="font-size: 1rem; color: #a6adb8"></i></div>
-                      <ul class="navbar-nav">
-                          <li class="nav-item dropdown">
-                              <a class="dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">
-                                  ${session ['user']}
-                              </a>
-                              <div class="dropdown-item" aria-labelledby="navbarDropdownMenuLink">
-                                  <g:link controller="Login" action="logout">Logout</g:link>
-                              </div>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-          </nav>
+    <head>
+        <asset:javascript src="popper.min.js"/>
+        <asset:javascript src="bootstrap.bundle.min.js"/>
+        <asset:javascript src="jquery-3.3.1.min.js"/>
+        <asset:javascript src="bootstrap.min.js"/>
+        <asset:stylesheet src="bootstrap.min.css"/>
+        <asset:stylesheet src="bootstrap-icons.css"/>
+        <asset:stylesheet src="styles.css"/>
+        <title>Υπάλληλοι</title>
+    </head>
+<body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Εταιρεία</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                            ${session ['user']}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <g:link controller="Login" action="logout" class="dropdown-item">Logout</g:link>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
 
   <br><br><br>
              <h3>Παρακάτω φαίνονται οι υπάλληλοι:</h3>
