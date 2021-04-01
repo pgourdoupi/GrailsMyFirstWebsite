@@ -36,50 +36,45 @@
             </div>
     </nav>
 
-
-
-        <h3>Παρακάτω φαίνονται τα τμήματα:</h3>
-        <h3 style="margin-left: 10%; margin-top: 2%; padding:0%" ></h3>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Κωδικός τμήματος</th>
-                    <th scope="col">Όνομα τμήματος</th>
-                    <th scope="col">Επιλογές</th>
-                </tr>
-            </thead>
-
-            <tbody>
-
-                <g:each var="department" in="${allDepartments}">
-
+    <div class="container mb-md-2 mt-md-2">
+       <h3>Παρακάτω φαίνονται τα τμήματα:</h3>
+            <table class="table">
+                <thead>
                     <tr>
-                        <th scope="row">${department.department_id}</th>
-                        <th scope="row">${department.department_name}</th>
-                        <td>
-                            <g:link controller="department" action="updateDepartmentForm"
-                                        params="[department_name: department.department_name, department_id: department.department_id]">
-                                <g:actionSubmit type="submit" class="btn btn-primary" value="Ενημέρωση" action="updateDepartmentForm"/>
-                            </g:link>
-
-                            <g:link controller="department" action="deleteDepartment"
-                                    params="[department_id: department.department_id]">
-                                    <g:actionSubmit type="submit" class="btn btn-primary" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" value="Διαγραφή"/>
-                            </g:link>
-                        </td>
+                        <th scope="col">Κωδικός τμήματος</th>
+                        <th scope="col">Όνομα τμήματος</th>
+                        <th scope="col">Επιλογές</th>
                     </tr>
-                </g:each>
-            </tbody>
-         </table>
-            <g:link controller="department" action="createDepartmentForm" params="department_name">
-                <g:actionSubmit type="submit" class="btn btn-primary" value="Δημιουργία τμήματος" action="createDepartmentForm"/>
-            </g:link>
-         <br><br><br>
-          <g:link controller="employee" action="viewEmployees">
-              <g:actionSubmit type="submit" class="btn btn-primary" value="Employees" action="viewEmployees"/>
-          </g:link>
+                </thead>
 
+                <tbody>
+                    <g:each var="department" in="${allDepartments}">
+                        <tr>
+                            <td colspan="row">${department.department_id}</td>
+                            <td colspan="row">${department.department_name}</td>
+                            <td>
+                                <g:link controller="department" action="updateDepartmentForm"
+                                            params="[department_name: department.department_name, department_id: department.department_id]">
+                                    <g:actionSubmit type="submit" class="btn btn-primary" value="Ενημέρωση" action="updateDepartmentForm"/>
+                                </g:link>
+
+                                <g:link controller="department" action="deleteDepartment"
+                                        params="[department_id: department.department_id]">
+                                        <g:actionSubmit type="submit" class="btn btn-primary" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" value="Διαγραφή"/>
+                                </g:link>
+                            </td>
+                        </tr>
+                    </g:each>
+                </tbody>
+             </table>
+                <g:link controller="department" action="createDepartmentForm" params="department_name">
+                    <g:actionSubmit type="submit" class="btn btn-primary" value="Δημιουργία τμήματος" action="createDepartmentForm"/>
+                </g:link>
+             <br><br><br>
+              <g:link controller="employee" action="viewEmployees">
+                  <g:actionSubmit type="submit" class="btn btn-primary" value="Employees" action="viewEmployees"/>
+              </g:link>
+    </div>
   </body>
-
 </html>
 
