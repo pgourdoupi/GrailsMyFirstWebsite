@@ -12,7 +12,7 @@
 
 <br><br><br>
  <body>
-     <div class="container mb-4 mt-4 col-4 border bg-info">
+     <div class="container mb-4 mt-4 col-4 border bg-light">
             <nav class="navbar navbar-light">
                 <g:form class="loginForm" controller="login" action="doLogin">
                     <h2>Σύνδεση</h2>
