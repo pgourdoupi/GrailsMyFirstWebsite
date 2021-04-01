@@ -7,7 +7,6 @@ import groovy.sql.Sql
 class LoginService {
 
     def dataSource
-
     def login(params) {
         def sql = new Sql(dataSource)
         try {

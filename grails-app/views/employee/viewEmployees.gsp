@@ -65,7 +65,7 @@
                                     <g:actionSubmit type="submit" class="btn btn-primary" value="Ενημέρωση" action="updateEmployeeForm"/>
                                 </g:link>
                                 <g:link controller="Employee" action="deleteEmployee" params="[employee_id: employee.employee_id]">
-                                    <g:actionSubmit type="submit" class="btn btn-primary" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" value="Διαγραφή" action="deleteEmployee"/>
+                                    <g:actionSubmit type="submit" class="btn btn-primary" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', message: 'Είστε σίγουρος οτι θέλετε να διαγράψετε αυτόν τον υπάλληλο;')}');" value="Διαγραφή" action="deleteEmployee"/>
                                 </g:link>
                             </td>
                         </tr>

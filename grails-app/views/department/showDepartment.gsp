@@ -60,7 +60,7 @@
 
                                 <g:link controller="department" action="deleteDepartment"
                                         params="[department_id: department.department_id]">
-                                        <g:actionSubmit type="submit" class="btn btn-primary" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" value="Διαγραφή"/>
+                                        <g:actionSubmit type="submit" class="btn btn-primary" onclick="return confirm('${message(code:'default.button.delete.confirm.message', message: 'Είστε σίγουρος οτι θέλετε να διαγράψετε αυτό το τμήμα;')}');" value="Διαγραφή"/>
                                 </g:link>
                             </td>
                         </tr>
