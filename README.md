@@ -1,12 +1,18 @@
 # GrailsMyFirstWebsite
 This is a website on grails. Contains 2 main tables, departments & employees, where a user can manage the employees as well as the departments. Crud is implemented for both tables.
-![Login](https://user-images.githubusercontent.com/80097096/112665610-ec29c900-8e63-11eb-8bd5-2e8f144b31c0.png)
-![Departments](https://user-images.githubusercontent.com/80097096/112665602-ea600580-8e63-11eb-8100-40a890f4b103.png)
-![createDepartment](https://user-images.githubusercontent.com/80097096/112665585-e59b5180-8e63-11eb-93cc-0a64c85a900a.png)
-![updateDepartment](https://user-images.githubusercontent.com/80097096/112665612-ed5af600-8e63-11eb-9891-7d216cd7e36f.png)
-![Employees](https://user-images.githubusercontent.com/80097096/112665607-eb913280-8e63-11eb-8ff6-a8f5d4f9369b.png)
-![createEmployee](https://user-images.githubusercontent.com/80097096/112665598-e92ed880-8e63-11eb-855a-b9d3914fdd36.png)
-![updateEmployee](https://user-images.githubusercontent.com/80097096/112665618-edf38c80-8e63-11eb-8eb3-2c545a99c3ea.png)
+![Login](https://user-images.githubusercontent.com/80097096/113283541-17436b00-92f1-11eb-8f80-4371166b134a.png)
+![Departments](https://user-images.githubusercontent.com/80097096/113283537-16123e00-92f1-11eb-895c-e036fcf66480.png)
+![CreateDepartment](https://user-images.githubusercontent.com/80097096/113283523-14487a80-92f1-11eb-94e7-6976f5e8997f.png)
+![UpdateDepartment](https://user-images.githubusercontent.com/80097096/113283545-17436b00-92f1-11eb-9652-85dd4bdc46d9.png)
+![DeleteDepartment](https://user-images.githubusercontent.com/80097096/113283533-1579a780-92f1-11eb-9d18-c37e8077185d.png)
+![Employees](https://user-images.githubusercontent.com/80097096/113283539-16aad480-92f1-11eb-9383-a18a7ebfd6b9.png)
+![CreateEmployee](https://user-images.githubusercontent.com/80097096/113283528-14e11100-92f1-11eb-9188-521671cb059b.png)
+![UpdateEmployee](https://user-images.githubusercontent.com/80097096/113283546-17dc0180-92f1-11eb-82f4-200cde099ea0.png)
+![DeleteEmployee](https://user-images.githubusercontent.com/80097096/113283535-16123e00-92f1-11eb-8291-855ef0b703c3.png)
+
+
+
+
 
 
 
