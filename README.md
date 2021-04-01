@@ -1,5 +1,6 @@
 # GrailsMyFirstWebsite
 This is a website on grails. Contains 2 main tables, departments & employees, where a user can manage the employees as well as the departments. Crud is implemented for both tables.
+
 Login page
 
 ![Login](https://user-images.githubusercontent.com/80097096/113294173-55e02200-92ff-11eb-925f-e6ddffaf543c.png)
