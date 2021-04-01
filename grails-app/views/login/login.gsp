@@ -12,17 +12,17 @@
 
 <br><br><br>
  <body>
-     <div class="container mb-4 mt-4 col-4 border bg-light">
+     <div class="container mb-4 mt-4 col-4 border bg-light w-25">
             <nav class="navbar navbar-light">
                 <g:form class="loginForm" controller="login" action="doLogin">
                     <h2>Σύνδεση</h2>
-                    <div class="form-group m-2">
-                        <label class="form-label" for="login">Όνομα χρήστη:</label>
-                        <input type="text" id="login" placeholder="Εισάγετε το όνομα σας" required name="login">
+                    <div class="form-group">
+                        <label class="form-group" for="login">Όνομα χρήστη:</label>
+                        <input type="text" class="form-control" id="login" placeholder="Εισάγετε το όνομα σας"/>
                     </div>
-                    <div class="form-group m-3">
-                        <label class="form-label" for="password">Κωδικός:</label>
-                        <input type="password" id="password" placeholder="Εισάγετε τον κωδικό σας" required name="password">
+                    <div class="form-group">
+                        <label class="form-group" for="password">Κωδικός:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Εισάγετε τον κωδικό σας"/>
                         <g:if test="${flash.message}">
                             <div class="message" style="display: block">${flash.message}</div>
                         </g:if>
