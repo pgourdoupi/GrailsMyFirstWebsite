@@ -40,13 +40,13 @@
                 <g:form name="createEmployeeForm" controller="Employee" action="updateEmployee">
                     <div class="mb-3">
                         <label class="form-label" for="employee_id">Κωδικός υπαλλήλου</label>
-                        <input id="employee_id" name="employee_id" class="form-control" required="true"
+                        <input id="employee_id" name="employee_id" class="form-control"
                                value="${employeeInformation.employee_id}" readonly maxlength="15"><br/>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="department_id">Όνομα τμήματος</label>
-                        <select id="department_id" name="department_id" class="form-select" aria-label="Default select example">
-                            <option name="department_id" value="${employeeInformation.departmentIdFromCurrentEmployee.department_id}" select="selected">${employeeInformation.department_name}</option>
+                        <select id="department_id" name="department_id" class="form-control" aria-label="Default select example">
+                            <option selected name="department_id" value="${employeeInformation.departmentIdFromCurrentEmployee.department_id}">${employeeInformation.department_name}</option>
                             <g:each var="departments" in="${employeeInformation.departments}">
                                 <option name="department_id" value="${departments.department_id}">${departments.department_name}</option>
                             </g:each>
@@ -54,23 +54,23 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="first_name">Όνομα</label>
-                        <input id="first_name" name="first_name" class="form-control" required="true"
+                        <input id="first_name" name="first_name" class="form-control"
                                value="${employeeInformation.first_name}" maxlength="15"><br/>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="last_name">Επώνυμο</label>
-                        <input id="last_name" name="last_name" class="form-control" required="true"
+                        <input id="last_name" name="last_name" class="form-control"
                                value="${employeeInformation.last_name}" maxlength="15"><br/>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label" for="afm">ΑΦΜ</label>
-                        <input id="afm" name="afm" class="form-control" required="true"
+                        <input id="afm" name="afm" class="form-control"
                                value="${employeeInformation.afm}" maxlength="9"><br/>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="dob">Ημερομηνία Γέννησης</label>
-                        <input id="dob" name="dob" class="form-control" required="true"
+                        <input id="dob" name="dob" class="form-control"
                                value="${employeeInformation.dob}" maxlength="15"><br/>
                     </div>
 

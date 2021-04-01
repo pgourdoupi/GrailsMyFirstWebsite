@@ -40,13 +40,14 @@
 <div class="container md-3 mt-3 border w-50">
                 <h2>Προσθήκη υπαλλήλου</h2>
                 <g:form name="createEmployeeForm" controller="employee" action="createEmployee">
-                    <label class="form-label" for="department_id">Όνομα τμήματος</label>
-                    <select id="department_id" name="department_id" class="form-select" aria-label="Default select example">
-                        <g:each var="department" in="${departments}">
+                   <div>
+                     <label class="form-label" for="department_id">Όνομα τμήματος</label><br>
+                     <select id="department_id" name="department_id" class="form-control" aria-label="Default select example">
+                         <g:each var="department" in="${departments}">
                             <option name="department_id" value="${department.department_id}">${department.department_name}</option>
-                        </g:each>
-                    </select>
-
+                         </g:each>
+                     </select><br>
+                   </div>
                     <div class="mb-3">
                         <label class="form-label" for="first_name">Όνομα</label>
                         <input id="first_name" name="first_name" class="form-control" required="true" maxlength="50"><br/>
