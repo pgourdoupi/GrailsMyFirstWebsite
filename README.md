@@ -7,7 +7,7 @@ Login page
 
 Departments
 
-![Departments](https://user-images.githubusercontent.com/80097096/113283537-16123e00-92f1-11eb-895c-e036fcf66480.png)
+![Departments](https://user-images.githubusercontent.com/80097096/113391995-149e4f80-939d-11eb-8dc1-7737eb93b03b.png)
 
 Create a department
 
@@ -19,11 +19,11 @@ Update a department
 
 Delete a department
 
-![DeleteDepartment](https://user-images.githubusercontent.com/80097096/113283533-1579a780-92f1-11eb-9d18-c37e8077185d.png)
+![DeleteDepartment](https://user-images.githubusercontent.com/80097096/113391984-123bf580-939d-11eb-8f0f-b0fc9c364178.png)
 
 Employees
 
-![Employees](https://user-images.githubusercontent.com/80097096/113283539-16aad480-92f1-11eb-9383-a18a7ebfd6b9.png)
+![Employees](https://user-images.githubusercontent.com/80097096/113391999-1536e600-939d-11eb-8a35-a54a353ba7ef.png)
 
 Create an employee
 
@@ -35,7 +35,10 @@ Update an employee
 
 Delete an employee
 
-![DeleteEmployee](https://user-images.githubusercontent.com/80097096/113283535-16123e00-92f1-11eb-8291-855ef0b703c3.png)
+![DeleteEmployee](https://user-images.githubusercontent.com/80097096/113391987-136d2280-939d-11eb-9b01-7cb58150398a.png)
+
+
+
 
 
 
