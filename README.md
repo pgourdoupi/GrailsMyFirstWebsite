@@ -3,7 +3,7 @@ This is a website on grails. Contains 2 main tables, departments & employees, wh
 
 Login page
 
-![Login](https://user-images.githubusercontent.com/80097096/113294173-55e02200-92ff-11eb-925f-e6ddffaf543c.png)
+![Login](https://user-images.githubusercontent.com/80097096/113333538-3828b200-932b-11eb-84a9-841e72c2e0a3.png)
 
 Departments
 
@@ -27,11 +27,11 @@ Employees
 
 Create an employee
 
-![CreateEmployee](https://user-images.githubusercontent.com/80097096/113283528-14e11100-92f1-11eb-9188-521671cb059b.png)
+![CreateEmployee](https://user-images.githubusercontent.com/80097096/113333535-37901b80-932b-11eb-965b-acf3f35705fa.png)
 
 Update an employee
 
-![UpdateEmployee](https://user-images.githubusercontent.com/80097096/113283546-17dc0180-92f1-11eb-82f4-200cde099ea0.png)
+![UpdateEmployee](https://user-images.githubusercontent.com/80097096/113333541-38c14880-932b-11eb-8715-88b3c0d55751.png)
 
 Delete an employee
 
