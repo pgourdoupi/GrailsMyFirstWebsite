@@ -14,7 +14,7 @@
         <asset:stylesheet src="bootstrap-icons.css"/>
         <asset:stylesheet src="styles.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw==" crossorigin="anonymous">
-        <title>Είσοδος</title>
+        <title><g:message code="message.entry"/></title>
         <meta charset="UTF-8" lang="lang">
     </head>
  <body>

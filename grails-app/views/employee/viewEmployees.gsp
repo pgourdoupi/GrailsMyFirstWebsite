@@ -14,7 +14,7 @@
         <asset:stylesheet src="bootstrap.min.css"/>
         <asset:stylesheet src="bootstrap-icons.css"/>
         <asset:stylesheet src="styles.css"/>
-        <title>Υπάλληλοι</title>
+        <title><g:message code="message.employees_page"/></title>
     </head>
 <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">

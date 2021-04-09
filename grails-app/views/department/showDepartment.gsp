@@ -14,7 +14,7 @@
         <asset:stylesheet src="bootstrap.min.css"/>
         <asset:stylesheet src="bootstrap-icons.css"/>
         <asset:stylesheet src="styles.css"/>
-        <title>Τμήματα</title>
+        <title><g:message code="message.departments"/></title>
     </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -80,7 +80,7 @@
                 </g:link>
              <br><br><br>
               <g:link controller="employee" action="viewEmployees">
-                  <g:actionSubmit type="submit" class="btn btn-primary" value="${g.message (code: 'message.body.o')}" action="viewEmployees"/>
+                  <g:actionSubmit type="submit" class="btn btn-primary" value="${g.message (code: 'message.employees_page')}" action="viewEmployees"/>
               </g:link>
     </div>
   </body>

@@ -5,7 +5,6 @@
   Time: 9:28 μ.μ.
 --%>
 <html>
-<head>
     <head>
         <asset:javascript src="popper.min.js"/>
         <asset:javascript src="bootstrap.bundle.min.js"/>
@@ -14,7 +13,7 @@
         <asset:stylesheet src="bootstrap.min.css"/>
         <asset:stylesheet src="bootstrap-icons.css"/>
         <asset:stylesheet src="styles.css"/>
-        <title>Δημιουργία Τμήματος</title>
+        <title><g:message code="message.create_department"/></title>
     </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">

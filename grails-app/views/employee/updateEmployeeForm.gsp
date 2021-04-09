@@ -13,7 +13,7 @@
         <asset:stylesheet src="bootstrap.min.css"/>
         <asset:stylesheet src="bootstrap-icons.css"/>
         <asset:stylesheet src="styles.css"/>
-        <title>Ενημέρωση Υπαλλήλου</title>
+        <title><g:message code="message.update_employee_data"/></title>
     </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
