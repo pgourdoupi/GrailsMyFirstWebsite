@@ -29,7 +29,7 @@
                         ${session ['user']}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <g:link controller="Login" action="logout" class="dropdown-item"><g:message code="message.exit"/></g:link>
+                        <g:link controller="Login" action="logout" class="dropdown-item"><g:message code="message.logout"/></g:link>
                     </div>
                 </li>
             </ul>
@@ -38,10 +38,10 @@
 
 
 <div class="container md-3 mt-3 border w-50">
-                <h2><g:message code="message.body.bb"/></h2>
+                <h2><g:message code="message.create_employee"/></h2>
                 <g:form name="createEmployeeForm" controller="employee" action="createEmployee">
                    <div>
-                     <label class="form-label" for="department_id"><g:message code="message.body.j"/></label><br>
+                     <label class="form-label" for="department_id"><g:message code="message.department_id"/></label><br>
                      <select id="department_id" name="department_id" class="form-control" aria-label="Default select example">
                          <g:each var="department" in="${departments}">
                             <option name="department_id" value="${department.department_id}">${department.department_name}</option>
@@ -49,22 +49,22 @@
                      </select><br>
                    </div>
                     <div class="mb-3">
-                        <label class="form-label" for="first_name"><g:message code="message.body.u"/></label>
+                        <label class="form-label" for="first_name"><g:message code="message.first_name"/></label>
                         <input id="first_name" name="first_name" class="form-control" required="true" maxlength="50"><br/>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="last_name"><g:message code="message.body.v"/></label>
+                        <label class="form-label" for="last_name"><g:message code="message.last_name"/></label>
                         <input id="last_name" name="last_name" class="form-control" required="true" maxlength="50"><br/>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="afm"><g:message code="message.body.x"/></label>
+                        <label class="form-label" for="afm"><g:message code="message.afm"/></label>
                         <input id="afm" name="afm" class="form-control" required="true" maxlength="9"><br/>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="dob"><g:message code="message.body.w"/></label>
+                        <label class="form-label" for="dob"><g:message code="message.date_of_birth"/></label>
                         <input id="dob" name="dob" class="form-control" required="true" placeholder="DD-MM-YYYY"/>
                     </div>
-                    <g:actionSubmit type="button" class="btn btn-primary" value="${g.message (code: 'message.body.bb')}" action="createEmployee"/>
+                    <g:actionSubmit type="button" class="btn btn-primary" value="${g.message (code: 'message.create_employee')}" action="createEmployee"/>
                 </g:form>
             </div>
  </body>

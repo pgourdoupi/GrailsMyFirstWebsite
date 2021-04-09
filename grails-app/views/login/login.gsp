@@ -34,19 +34,19 @@
      <div class="container border bg-light w-25">
                 <nav class="navbar navbar-light">
                     <g:form class="loginForm" controller="login" action="doLogin">
-                        <h3><g:message code="message.body.a"/></h3>
+                        <h3><g:message code="message.login"/></h3>
                         <div class="form-group">
-                            <label class="form-label" for="login"><g:message code="message.body.b"/></label>
-                            <input type="text" class="form-control" id="login" placeholder="<g:message code="message.body.c"/>" name="login"/>
+                            <label class="form-label" for="login"><g:message code="message.username"/></label>
+                            <input type="text" class="form-control" id="login" placeholder="<g:message code="message.enter_username"/>" name="login"/>
                         </div>
                         <div class="form-group">
-                            <label class="form-label" for="password"><g:message code="message.body.d"/></label>
-                            <input type="password" class="form-control" id="password" placeholder="<g:message code="message.body.e"/>" name="password"/>
+                            <label class="form-label" for="password"><g:message code="message.password"/></label>
+                            <input type="password" class="form-control" id="password" placeholder="<g:message code="message.enter_password"/>" name="password"/>
                             <g:if test="${flash.msg}">
                                 <div class="message" style="display: block">${flash.msg}</div>
                             </g:if>
                         </div>
-                          <g:actionSubmit type="submit" class="btn btn-secondary" value="${g.message (code: 'message.body.f')}" action="doLogin"/>
+                          <g:actionSubmit type="submit" class="btn btn-secondary" value="${g.message (code: 'message.entry')}" action="doLogin"/>
                     </g:form>
                 </nav>
      </div>

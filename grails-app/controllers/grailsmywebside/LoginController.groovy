@@ -13,7 +13,7 @@ class LoginController {
             redirect (controller: "department", action:"showDepartment")
         }
         else{
-             flash.msg = g.message (code:"message.body.g")
+             flash.msg = g.message (code:"message.wrong_credentials")
              redirect (action: "login")
             return false
         }

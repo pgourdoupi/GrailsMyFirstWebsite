@@ -28,7 +28,7 @@
                         ${session ['user']}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <g:link controller="Login" action="logout" class="dropdown-item"><g:message code="message.exit"/></g:link>
+                        <g:link controller="Login" action="logout" class="dropdown-item"><g:message code="message.logout"/></g:link>
                     </div>
                 </li>
             </ul>
@@ -36,20 +36,20 @@
     </nav>
 
 <div class="container md-3 mt-3 border w-50">
-        <h2><g:message code="message.body.q"/></h2>
+        <h2><g:message code="message.update_department_data"/></h2>
             <g:form name="createDepartmentForm" controller="department" action="updateDepartment">
                     <div class="mb-3">
-                        <label class="form-label" for="department_id"><g:message code="message.body.i"/></label>
+                        <label class="form-label" for="department_id"><g:message code="message.department_id"/></label>
                         <input id="department_id" name="department_id" class="form-control" required="true"
                             value="${departmentInformation.department_id}" readonly><br/>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label" for="department_name"><g:message code="message.body.r"/></label>
+                        <label class="form-label" for="department_name"><g:message code="message.new_department_name"/></label>
                         <input id="department_name" name="department_name" class="form-control" required="true"
                                value="${departmentInformation.department_name}"><br/>
                     </div>
-                    <g:actionSubmit type="submit" class="btn btn-primary" value="${g.message (code: 'message.body.l')}" action="updateDepartment"/>
+                    <g:actionSubmit type="submit" class="btn btn-primary" value="${g.message (code: 'message.update_department')}" action="updateDepartment"/>
             </g:form>
      </div>
 
