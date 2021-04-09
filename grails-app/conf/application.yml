@@ -1,4 +1,10 @@
 ---
+guide:
+    languages:
+        - gr
+        - gb
+        - de
+---
 grails:
     profile: web
     codegen:

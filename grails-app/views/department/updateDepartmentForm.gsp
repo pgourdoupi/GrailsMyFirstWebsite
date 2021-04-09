@@ -6,7 +6,6 @@
 --%>
 <html>
 <head>
-    <head>
         <asset:javascript src="popper.min.js"/>
         <asset:javascript src="bootstrap.bundle.min.js"/>
         <asset:javascript src="jquery-3.3.1.min.js"/>
@@ -29,7 +28,7 @@
                         ${session ['user']}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <g:link controller="Login" action="logout" class="dropdown-item">Έξοδος</g:link>
+                        <g:link controller="Login" action="logout" class="dropdown-item"><g:message code="message.exit"/></g:link>
                     </div>
                 </li>
             </ul>
@@ -37,20 +36,20 @@
     </nav>
 
 <div class="container md-3 mt-3 border w-50">
-        <h2>Ενημέρωση στοιχείων τμήματος</h2>
+        <h2><g:message code="message.body.q"/></h2>
             <g:form name="createDepartmentForm" controller="department" action="updateDepartment">
                     <div class="mb-3">
-                        <label class="form-label" for="department_id">Κωδικός τμήματος</label>
+                        <label class="form-label" for="department_id"><g:message code="message.body.i"/></label>
                         <input id="department_id" name="department_id" class="form-control" required="true"
                             value="${departmentInformation.department_id}" readonly><br/>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label" for="department_name">Νέο Όνομα τμήματος</label>
+                        <label class="form-label" for="department_name"><g:message code="message.body.r"/></label>
                         <input id="department_name" name="department_name" class="form-control" required="true"
                                value="${departmentInformation.department_name}"><br/>
                     </div>
-                    <g:submitButton type="submit" class="btn btn-primary" name="Ενημέρωση" action="updateDepartment"/>
+                    <g:actionSubmit type="submit" class="btn btn-primary" value="${g.message (code: 'message.body.l')}" action="updateDepartment"/>
             </g:form>
      </div>
 

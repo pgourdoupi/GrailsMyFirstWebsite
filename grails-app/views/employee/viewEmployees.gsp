@@ -29,24 +29,24 @@
                             ${session ['user']}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <g:link controller="Login" action="logout" class="dropdown-item">Έξοδος</g:link>
+                            <g:link controller="Login" action="logout" class="dropdown-item"><g:message code="message.exit"/></g:link>
                         </div>
                     </li>
                 </ul>
             </div>
         </nav>
          <div class="container mb-3 mt-3">
-            <h3>Παρακάτω φαίνονται οι υπάλληλοι:</h3>
+            <h3><g:message code="message.body.s"/></h3>
                  <table class="table">
                      <thead>
                          <tr>
-                            <th scope="col">Κωδικός υπαλλήλου</th>
-                            <th scope="col">Όνομα</th>
-                            <th scope="col">Επώνυμο</th>
-                            <th scope="col">Ημερομηνία γέννησης</th>
-                            <th scope="col">ΑΦΜ</th>
-                            <th scope="col">Όνομα τμήματος</th>
-                            <th scope="col">Επιλογές</th>
+                            <th scope="col"><g:message code="message.body.t"/></th>
+                            <th scope="col"><g:message code="message.body.u"/></th>
+                            <th scope="col"><g:message code="message.body.v"/></th>
+                            <th scope="col"><g:message code="message.body.w"/></th>
+                            <th scope="col"><g:message code="message.body.x"/></th>
+                            <th scope="col"><g:message code="message.body.j"/></th>
+                            <th scope="col"><g:message code="message.body.k"/></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -62,10 +62,11 @@
                                 <g:link controller="Employee" action="updateEmployeeForm"
                                         params="[employee_id: employee.employee_id, first_name: employee.first_name, department_name: employee.department_name,
                                                   last_name: employee.last_name, dob: employee.dob, afm: employee.afm]">
-                                    <g:actionSubmit type="submit" class="btn btn-primary" value="Ενημέρωση" action="updateEmployeeForm"/>
+                                    <g:actionSubmit type="submit" class="btn btn-primary" value="${g.message (code: 'message.body.l')}" action="updateEmployeeForm"/>
                                 </g:link>
                                 <g:link controller="Employee" action="deleteEmployee" params="[employee_id: employee.employee_id]">
-                                    <g:actionSubmit type="submit" class="btn btn-danger" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', message: 'Είστε σίγουρος οτι θέλετε να διαγράψετε αυτόν τον υπάλληλο;')}');" value="Διαγραφή" action="deleteEmployee"/>
+                                    <g:actionSubmit type="submit" class="btn btn-danger" onclick="return confirm('${g.message(code:'default.button.delete.confirm.message.body.dd')}');"
+                                                    value="${g.message (code: 'message.body.m')}"/>
                                 </g:link>
                             </td>
                         </tr>
@@ -73,7 +74,7 @@
                     </tbody>
                  </table>
                         <g:link controller="employee" action="createEmployeeForm">
-                            <g:actionSubmit type="submit" class="btn btn-primary" value="Δημιουργία" action="createEmployeeForm"/>
+                            <g:actionSubmit type="submit" class="btn btn-primary"  value="${g.message (code: 'message.body.bb')}" action="createEmployeeForm"/>
                         </g:link>
          </div>
  </body>

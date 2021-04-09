@@ -9,6 +9,7 @@ class UrlMappings {
             }
         }
 
+        //"/viewBooks" (redirect: '/books/list')
         "/"(controller: "Login", action: "login")
         "500"(view:'/error')
         "404"(view:'/notFound')

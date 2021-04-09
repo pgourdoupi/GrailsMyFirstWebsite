@@ -29,7 +29,7 @@
                         ${session ['user']}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <g:link controller="Login" action="logout" class="dropdown-item">Έξοδος</g:link>
+                        <g:link controller="Login" action="logout" class="dropdown-item"><g:message code="message.exit"/></g:link>
                     </div>
                 </li>
             </ul>
@@ -37,13 +37,13 @@
     </nav>
 
     <div class="container md-3 mt-3 border w-50">
-                <h2>Δημιουργία νέου τμήματος</h2>
+                <h2><g:message code="message.body.n"/></h2>
          <g:form name="createDepartmentForm" controller="department" action="createDepartment">
              <div class="mb-3">
-                 <label class="form-label" for="department_name">Όνομα</label>
+                 <label class="form-label" for="department_name"><g:message code="message.body.j"/></label>
                  <input id="department_name" name="department_name" class="form-control" required="true" maxlength="10"><br/>
              </div>
-                <g:actionSubmit type="submit" class="btn btn-primary" value="Δημιουργία" action="createDepartment"/>
+                <g:actionSubmit type="submit" class="btn btn-primary" value="${g.message (code: 'message.body.n')}" action="createDepartment"/>
          </g:form>
     </div>
 

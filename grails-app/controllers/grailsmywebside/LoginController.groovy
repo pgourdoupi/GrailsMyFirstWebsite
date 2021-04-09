@@ -13,8 +13,8 @@ class LoginController {
             redirect (controller: "department", action:"showDepartment")
         }
         else{
-            flash.message = "Τα στοιχεία σας δεν είναι σωστά. Παρακαλώ προσπαθήστε ξανά!"
-            redirect (action: "login")
+             flash.msg = g.message (code:"message.body.g")
+             redirect (action: "login")
             return false
         }
 

@@ -28,7 +28,7 @@
                         ${session ['user']}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <g:link controller="Login" action="logout" class="dropdown-item">Έξοδος</g:link>
+                        <g:link controller="Login" action="logout" class="dropdown-item"><g:message code="message.exit"/></g:link>
                     </div>
                 </li>
             </ul>
@@ -36,15 +36,15 @@
     </nav>
 
  <div class="container md-3 mt-3 border w-50">
-                <h2>Ενημέρωση στοιχείων υπαλλήλου</h2>
+                <h2><g:message code="message.body.cc"/></h2>
                 <g:form name="createEmployeeForm" controller="Employee" action="updateEmployee">
                     <div class="mb-3">
-                        <label class="form-label" for="employee_id">Κωδικός υπαλλήλου</label>
+                        <label class="form-label" for="employee_id"><g:message code="message.body.t"/></label>
                         <input id="employee_id" name="employee_id" class="form-control"
                                value="${employeeInformation.employee_id}" readonly maxlength="15"><br/>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="department_id">Όνομα τμήματος</label>
+                        <label class="form-label" for="department_id"><g:message code="message.body.j"/></label>
                         <select id="department_id" name="department_id" class="form-control" aria-label="Default select example">
                             <option selected name="department_id" value="${employeeInformation.departmentIdFromCurrentEmployee.department_id}">${employeeInformation.department_name}</option>
                             <g:each var="departments" in="${employeeInformation.departments}">
@@ -53,28 +53,28 @@
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="first_name">Όνομα</label>
+                        <label class="form-label" for="first_name"><g:message code="message.body.u"/></label>
                         <input id="first_name" name="first_name" class="form-control"
                                value="${employeeInformation.first_name}" maxlength="15"><br/>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="last_name">Επώνυμο</label>
+                        <label class="form-label" for="last_name"><g:message code="message.body.v"/></label>
                         <input id="last_name" name="last_name" class="form-control"
                                value="${employeeInformation.last_name}" maxlength="15"><br/>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label" for="afm">ΑΦΜ</label>
+                        <label class="form-label" for="afm"><g:message code="message.body.x"/></label>
                         <input id="afm" name="afm" class="form-control"
                                value="${employeeInformation.afm}" maxlength="9"><br/>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="dob">Ημερομηνία Γέννησης</label>
+                        <label class="form-label" for="dob"><g:message code="message.body.w"/></label>
                         <input id="dob" name="dob" class="form-control"
                                value="${employeeInformation.dob}" maxlength="15"><br/>
                     </div>
 
-                    <g:submitButton type="submit" class="btn btn-primary" name="Ενημέρωση" action="updateEmployee"/>
+                    <g:actionSubmit type="submit" class="btn btn-primary" value="${g.message (code: 'message.body.dd')}" action="updateEmployee"/>
                 </g:form>
             </div>
 

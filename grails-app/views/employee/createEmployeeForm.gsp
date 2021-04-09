@@ -29,7 +29,7 @@
                         ${session ['user']}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <g:link controller="Login" action="logout" class="dropdown-item">Έξοδος</g:link>
+                        <g:link controller="Login" action="logout" class="dropdown-item"><g:message code="message.exit"/></g:link>
                     </div>
                 </li>
             </ul>
@@ -38,10 +38,10 @@
 
 
 <div class="container md-3 mt-3 border w-50">
-                <h2>Προσθήκη υπαλλήλου</h2>
+                <h2><g:message code="message.body.bb"/></h2>
                 <g:form name="createEmployeeForm" controller="employee" action="createEmployee">
                    <div>
-                     <label class="form-label" for="department_id">Όνομα τμήματος</label><br>
+                     <label class="form-label" for="department_id"><g:message code="message.body.j"/></label><br>
                      <select id="department_id" name="department_id" class="form-control" aria-label="Default select example">
                          <g:each var="department" in="${departments}">
                             <option name="department_id" value="${department.department_id}">${department.department_name}</option>
@@ -49,22 +49,22 @@
                      </select><br>
                    </div>
                     <div class="mb-3">
-                        <label class="form-label" for="first_name">Όνομα</label>
+                        <label class="form-label" for="first_name"><g:message code="message.body.u"/></label>
                         <input id="first_name" name="first_name" class="form-control" required="true" maxlength="50"><br/>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="last_name">Επώνυμο</label>
+                        <label class="form-label" for="last_name"><g:message code="message.body.v"/></label>
                         <input id="last_name" name="last_name" class="form-control" required="true" maxlength="50"><br/>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="afm">ΑΦΜ</label>
+                        <label class="form-label" for="afm"><g:message code="message.body.x"/></label>
                         <input id="afm" name="afm" class="form-control" required="true" maxlength="9"><br/>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="dob">Ημερομηνία Γέννησης</label>
+                        <label class="form-label" for="dob"><g:message code="message.body.w"/></label>
                         <input id="dob" name="dob" class="form-control" required="true" placeholder="DD-MM-YYYY"/>
                     </div>
-                    <g:actionSubmit type="button" class="btn btn-primary" value="Προσθήκη" action="createEmployee"/>
+                    <g:actionSubmit type="button" class="btn btn-primary" value="${g.message (code: 'message.body.bb')}" action="createEmployee"/>
                 </g:form>
             </div>
  </body>

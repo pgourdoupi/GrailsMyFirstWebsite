@@ -29,7 +29,7 @@
                             ${session ['user']}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <g:link controller="Login" action="logout" class="dropdown-item">Έξοδος</g:link>
+                            <g:link controller="Login" action="logout" class="dropdown-item"><g:message code="message.exit"/></g:link>
                         </div>
                     </li>
                 </ul>
@@ -37,13 +37,13 @@
     </nav>
 
     <div class="container mb-md-2 mt-md-2">
-       <h3>Παρακάτω φαίνονται τα τμήματα:</h3>
+       <h3><g:message code="message.body.h"/></h3>
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Κωδικός τμήματος</th>
-                        <th scope="col">Όνομα τμήματος</th>
-                        <th scope="col">Επιλογές</th>
+                        <th scope="col"><g:message code="message.body.i"/></th>
+                        <th scope="col"><g:message code="message.body.j"/></th>
+                        <th scope="col"><g:message code="message.body.k"/></th>
                     </tr>
                 </thead>
 
@@ -55,12 +55,14 @@
                             <td>
                                 <g:link controller="department" action="updateDepartmentForm"
                                             params="[department_name: department.department_name, department_id: department.department_id]">
-                                    <g:actionSubmit type="submit" class="btn btn-primary" value="Ενημέρωση" action="updateDepartmentForm"/>
+                                    <g:actionSubmit type="submit" class="btn btn-primary" value="${g.message (code: 'message.body.l')}" action="updateDepartmentForm"/>
                                 </g:link>
 
                                 <g:link controller="department" action="deleteDepartment"
                                         params="[department_id: department.department_id]">
-                                        <g:actionSubmit type="submit" class="btn btn-danger" onclick="return confirm('${message(code:'default.button.delete.confirm.message', message: 'Είστε σίγουρος οτι θέλετε να διαγράψετε αυτό το τμήμα;')}');" value="Διαγραφή"/>
+                                        <g:actionSubmit type="submit" class="btn btn-danger"
+                                                        onclick="return confirm('${g.message(code:'default.button.delete.confirm.message.body.p')}');"
+                                                       value="${g.message (code: 'message.body.m')}"/>
                                 </g:link>
                             </td>
                         </tr>
@@ -68,11 +70,11 @@
                 </tbody>
              </table>
                 <g:link controller="department" action="createDepartmentForm" params="department_name">
-                    <g:actionSubmit type="submit" class="btn btn-primary" value="Δημιουργία τμήματος" action="createDepartmentForm"/>
+                    <g:actionSubmit type="submit" class="btn btn-primary" value="${g.message (code: 'message.body.n')}" action="createDepartmentForm"/>
                 </g:link>
              <br><br><br>
               <g:link controller="employee" action="viewEmployees">
-                  <g:actionSubmit type="submit" class="btn btn-primary" value="Employees" action="viewEmployees"/>
+                  <g:actionSubmit type="submit" class="btn btn-primary" value="${g.message (code: 'message.body.o')}" action="viewEmployees"/>
               </g:link>
     </div>
   </body>
