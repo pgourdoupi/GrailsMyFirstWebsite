@@ -5,7 +5,7 @@
   Time: 9:26 μ.μ.
 --%>
 <html>
-<head>
+
     <head>
         <asset:javascript src="popper.min.js"/>
         <asset:javascript src="bootstrap.bundle.min.js"/>
@@ -24,6 +24,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><g:message code="navbar.languages" default="Languages"/> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <navBar:localeDropdownListItems uri="${request.forwardURI}"/>
+                    </ul>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                         ${session ['user']}

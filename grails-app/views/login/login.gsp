@@ -22,7 +22,7 @@
              <h1><g:message code="welcome.title"/></h1>
              <div class="collapse navbar-collapse" id="navbarSupportedContent">
                  <div class="navbar-nav ml-auto">
-                     <div class="dropdown">
+                     <div class="nav-item dropdown">
                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><g:message code="navbar.languages" default="Languages"/> <span class="caret"></span></a>
                              <ul class="dropdown-menu">
                                  <navBar:localeDropdownListItems uri="${request.forwardURI}"/>
