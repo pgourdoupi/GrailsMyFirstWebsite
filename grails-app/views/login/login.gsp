@@ -24,14 +24,11 @@
                  <div class="navbar-nav ml-auto">
                      <div class="nav-item dropdown">
                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><g:message code="navbar.languages" default="languages"/></a>
-                         ${session ['language']}
+
                          <ul class="dropdown-menu">
-                             <g:link controller="Locale" action="setLanguage">
-                                 <navBar:localeDropdownListItems uri="${request.forwardURI}"/>
-                                 <a class="dropdown-item"><span class="flag-icon flag-icon-gr"></span><g:message code="language.gr"/></a>
-                                 <a class="dropdown-item"><span class="flag-icon flag-icon-gb"></span><g:message code="language.gb"/></a>
-                                 <a class="dropdown-item"><span class="flag-icon flag-icon-de"></span><g:message code="language.de"/></a>
-                             </g:link>
+                            <g:link controller="SetLocale" params="locale=gr" url="localhost:8080/login/login"><li class="dropdown-item"><span class="flag-icon flag-icon-gr"></span><g:message code="language.gr"/></li></g:link>
+                            <g:link controller="SetLocale" params="locale=gb" url="localhost:8080/login/login"><li class="dropdown-item"><span class="flag-icon flag-icon-gb"></span><g:message code="language.gb"/></li></g:link>
+                            <g:link controller="SetLocale" params="locale=de" url="localhost:8080/login/login"><li class="dropdown-item"><span class="flag-icon flag-icon-de"></span><g:message code="language.de"/></li></g:link>
                          </ul>
                      </div>
                  </div>
