@@ -17,23 +17,22 @@
         <title><g:message code="message.entry"/></title>
     </head>
  <body>
-
-         <nav class="navbar navbar-expand-md navbar-light bg-light">
-             <h1><g:message code="welcome.title"/></h1>
-             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                 <div class="navbar-nav ml-auto">
-                     <div class="nav-item dropdown">
-                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><g:message code="navbar.languages" default="languages"/></a>
-
-                         <ul class="dropdown-menu">
-                            <g:link controller="SetLocale" params="locale=gr" url="localhost:8080/login/login"><li class="dropdown-item"><span class="flag-icon flag-icon-gr"></span><g:message code="language.gr"/></li></g:link>
-                            <g:link controller="SetLocale" params="locale=gb" url="localhost:8080/login/login"><li class="dropdown-item"><span class="flag-icon flag-icon-gb"></span><g:message code="language.gb"/></li></g:link>
-                            <g:link controller="SetLocale" params="locale=de" url="localhost:8080/login/login"><li class="dropdown-item"><span class="flag-icon flag-icon-de"></span><g:message code="language.de"/></li></g:link>
-                         </ul>
-                     </div>
+     <nav class="navbar navbar-expand-md navbar-light bg-light">
+         <h1><g:message code="welcome.title"/></h1>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <div class="navbar-nav ml-auto">
+                 <div class="nav-item dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><g:message code="navbar.languages" default="languages"/></a>
+                     <ul class="dropdown-menu">
+                         <g:link controller="setLocale" params="[lang:'gr', theURL: request.getRequestURI()]"><li class="dropdown-item"><span class="flag-icon flag-icon-gr"></span><g:message code="language.gr"/></li></g:link>
+                         <g:link controller="setLocale" params="[lang:'gb', theURL: request.getRequestURI()]"><li class="dropdown-item"><span class="flag-icon flag-icon-gb"></span><g:message code="language.gb"/></li></g:link>
+                         <g:link controller="setLocale" params="[lang:'de', theURL: request.getRequestURI()]"><li class="dropdown-item"><span class="flag-icon flag-icon-de"></span><g:message code="language.de"/></li></g:link>
+                     </ul>
                  </div>
              </div>
-         </nav>
+         </div>
+     </nav>
+
      <div class="container border bg-light w-25">
                 <nav class="navbar navbar-light">
                     <g:form class="loginForm" controller="login" action="doLogin">

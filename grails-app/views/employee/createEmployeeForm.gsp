@@ -14,6 +14,7 @@
         <asset:stylesheet src="bootstrap.min.css"/>
         <asset:stylesheet src="bootstrap-icons.css"/>
         <asset:stylesheet src="styles.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw==" crossorigin="anonymous">
         <title><g:message code="message.create_employee"/></title>
     </head>
 <body>
@@ -27,7 +28,9 @@
                 <li class="nav-item dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><g:message code="navbar.languages" default="Languages"/> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <navBar:localeDropdownListItems uri="${request.forwardURI}"/>
+                        <g:link controller="setLocale" params="[lang:'gr', theURL: request.getRequestURI()]"><li class="dropdown-item"><span class="flag-icon flag-icon-gr"></span><g:message code="language.gr"/></li></g:link>
+                        <g:link controller="setLocale" params="[lang:'gb', theURL: request.getRequestURI()]"><li class="dropdown-item"><span class="flag-icon flag-icon-gb"></span><g:message code="language.gb"/></li></g:link>
+                        <g:link controller="setLocale" params="[lang:'de', theURL: request.getRequestURI()]"><li class="dropdown-item"><span class="flag-icon flag-icon-de"></span><g:message code="language.de"/></li></g:link>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
