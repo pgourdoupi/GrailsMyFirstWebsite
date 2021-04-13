@@ -1,5 +1,3 @@
-package demp
-
 import geb.spock.GebSpec
 import grails.testing.mixin.integration.Integration
 
@@ -8,15 +6,15 @@ class ChangeLocaleSpec extends GebSpec {
 
     def "change locale"() {
         when:
-        go '/?lang=gb'
+        go '/?lang=gr'
 
         then:
-        $('h1').text() == 'Welcome!'
+        $('h1').text() == 'Καλώς Όρίσατε'
 
         when:
-        go '/?lang=de'
+        go '/?lang=en'
 
         then:
-        $('h1').text() == 'Willkommen!'
+        $('h1').text() == 'Welcome'
     }
 }

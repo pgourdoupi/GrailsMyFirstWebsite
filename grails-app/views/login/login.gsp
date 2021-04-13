@@ -15,18 +15,24 @@
         <asset:stylesheet src="styles.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw==" crossorigin="anonymous">
         <title><g:message code="message.entry"/></title>
-        <meta charset="UTF-8" lang="lang">
     </head>
  <body>
+
          <nav class="navbar navbar-expand-md navbar-light bg-light">
              <h1><g:message code="welcome.title"/></h1>
              <div class="collapse navbar-collapse" id="navbarSupportedContent">
                  <div class="navbar-nav ml-auto">
                      <div class="nav-item dropdown">
-                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><g:message code="navbar.languages" default="Languages"/> <span class="caret"></span></a>
-                             <ul class="dropdown-menu">
+                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><g:message code="navbar.languages" default="languages"/></a>
+                         ${session ['language']}
+                         <ul class="dropdown-menu">
+                             <g:link controller="Locale" action="setLanguage">
                                  <navBar:localeDropdownListItems uri="${request.forwardURI}"/>
-                             </ul>
+                                 <a class="dropdown-item"><span class="flag-icon flag-icon-gr"></span><g:message code="language.gr"/></a>
+                                 <a class="dropdown-item"><span class="flag-icon flag-icon-gb"></span><g:message code="language.gb"/></a>
+                                 <a class="dropdown-item"><span class="flag-icon flag-icon-de"></span><g:message code="language.de"/></a>
+                             </g:link>
+                         </ul>
                      </div>
                  </div>
              </div>
